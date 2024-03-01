@@ -1,0 +1,241 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\views\\home\\about.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\views\\home\\about.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\controllers\\homecontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\controllers\\homecontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\views\\aspnetuserroles\\index.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\views\\aspnetuserroles\\index.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\views\\roles\\index.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\views\\roles\\index.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\views\\aspnetusers\\index.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\views\\aspnetusers\\index.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\views\\aspnetuserroles\\create.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\views\\aspnetuserroles\\create.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\controllers\\rolescontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\controllers\\rolescontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\controllers\\aspnetuserrolescontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\controllers\\aspnetuserrolescontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\views\\aspnetuserroles\\edit.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\views\\aspnetuserroles\\edit.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\views\\aspnetusers\\create.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\views\\aspnetusers\\create.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\models\\aspnetuserroles.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\models\\aspnetuserroles.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\views\\product\\index.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\views\\product\\index.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\views\\category\\index.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\views\\category\\index.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.vbhtml",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\Roles\\Index.vbhtml",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Views\\Roles\\Index.vbhtml",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\Roles\\Index.vbhtml",
+              "RelativeToolTip": "WebMVCSecurity\\Views\\Roles\\Index.vbhtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003381|",
+              "WhenOpened": "2024-03-01T10:21:02.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.vb",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\HomeController.vb",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Controllers\\HomeController.vb",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\HomeController.vb",
+              "RelativeToolTip": "WebMVCSecurity\\Controllers\\HomeController.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-01T10:19:42.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Edit.vbhtml",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\AspNetUserRoles\\Edit.vbhtml",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Views\\AspNetUserRoles\\Edit.vbhtml",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\AspNetUserRoles\\Edit.vbhtml",
+              "RelativeToolTip": "WebMVCSecurity\\Views\\AspNetUserRoles\\Edit.vbhtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003381|",
+              "WhenOpened": "2024-03-01T09:51:38.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.vbhtml",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\AspNetUserRoles\\Create.vbhtml",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Views\\AspNetUserRoles\\Create.vbhtml",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\AspNetUserRoles\\Create.vbhtml",
+              "RelativeToolTip": "WebMVCSecurity\\Views\\AspNetUserRoles\\Create.vbhtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABIAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003381|",
+              "WhenOpened": "2024-03-01T09:51:17.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Create.vbhtml",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\AspNetUsers\\Create.vbhtml",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Views\\AspNetUsers\\Create.vbhtml",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\AspNetUsers\\Create.vbhtml",
+              "RelativeToolTip": "WebMVCSecurity\\Views\\AspNetUsers\\Create.vbhtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003381|",
+              "WhenOpened": "2024-03-01T09:51:15.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "About.vbhtml",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\Home\\About.vbhtml",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Views\\Home\\About.vbhtml",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\Home\\About.vbhtml",
+              "RelativeToolTip": "WebMVCSecurity\\Views\\Home\\About.vbhtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003381|",
+              "WhenOpened": "2024-03-01T09:32:23.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AspNetUserRolesController.vb",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\AspNetUserRolesController.vb",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Controllers\\AspNetUserRolesController.vb",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\AspNetUserRolesController.vb",
+              "RelativeToolTip": "WebMVCSecurity\\Controllers\\AspNetUserRolesController.vb",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAIwDwAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-01T08:50:21.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RolesController.vb",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\RolesController.vb",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Controllers\\RolesController.vb",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\RolesController.vb",
+              "RelativeToolTip": "WebMVCSecurity\\Controllers\\RolesController.vb",
+              "ViewState": "AQIAACMAAAAAAAAAAAAwwDIAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-01T08:49:44.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.vbhtml",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\Product\\Index.vbhtml",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Views\\Product\\Index.vbhtml",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\Product\\Index.vbhtml",
+              "RelativeToolTip": "WebMVCSecurity\\Views\\Product\\Index.vbhtml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAADcAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003381|",
+              "WhenOpened": "2024-03-01T08:48:53.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.vbhtml",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\Category\\Index.vbhtml",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Views\\Category\\Index.vbhtml",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\Category\\Index.vbhtml",
+              "RelativeToolTip": "WebMVCSecurity\\Views\\Category\\Index.vbhtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003381|",
+              "WhenOpened": "2024-03-01T08:48:46.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.vbhtml",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\AspNetUsers\\Index.vbhtml",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Views\\AspNetUsers\\Index.vbhtml",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\AspNetUsers\\Index.vbhtml",
+              "RelativeToolTip": "WebMVCSecurity\\Views\\AspNetUsers\\Index.vbhtml",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003381|",
+              "WhenOpened": "2024-03-01T08:48:35.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.vbhtml",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\AspNetUserRoles\\Index.vbhtml",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Views\\AspNetUserRoles\\Index.vbhtml",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\AspNetUserRoles\\Index.vbhtml",
+              "RelativeToolTip": "WebMVCSecurity\\Views\\AspNetUserRoles\\Index.vbhtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003381|",
+              "WhenOpened": "2024-03-01T08:48:27.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AspNetUserRoles.vb",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Models\\AspNetUserRoles.vb",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Models\\AspNetUserRoles.vb",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Models\\AspNetUserRoles.vb",
+              "RelativeToolTip": "WebMVCSecurity\\Models\\AspNetUserRoles.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-01T08:48:15.803Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
