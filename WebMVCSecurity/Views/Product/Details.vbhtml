@@ -22,8 +22,10 @@ End Code
 
             </div>
             <div>
-                @Html.ActionLink("Edit", "Edit", New With {.id = Model.product_id}) |
-                @Html.ActionLink("Back to List", "Index")
+                @If Request.IsAuthenticated AndAlso User.IsInRole("Admin") Then
+                    @Html.ActionLink("Edit", "Edit", New With {.id = Model.product_id}) 
+                End If
+                @Html.ActionLink("Back to List", "About", "Home")
             </div>
         </div>
 

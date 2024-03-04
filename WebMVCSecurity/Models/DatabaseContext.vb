@@ -18,6 +18,8 @@ Partial Public Class DatabaseContext
     Public Overridable Property AspNetUserLogins As DbSet(Of AspNetUserLogins)
     Public Overridable Property AspNetUserRoles As DbSet(Of AspNetUserRoles)
     Public Overridable Property AspNetUsers As DbSet(Of AspNetUsers)
+    Public Overridable Property UserCart As DbSet(Of UserCart)
+    Public Overridable Property CartView As DbSet(Of CartView)
 
     Protected Overrides Sub OnModelCreating(ByVal modelBuilder As DbModelBuilder)
         modelBuilder.Entity(Of category)() _
@@ -28,5 +30,6 @@ Partial Public Class DatabaseContext
             .HasMany(Function(e) e.AspNetUserRoles) _
             .WithRequired(Function(e) e.AspNetRoles) _
             .HasForeignKey(Function(e) e.RoleId)
+
     End Sub
 End Class

@@ -9,6 +9,7 @@ Imports System.Web.Mvc
 Imports WebMVCSecurity
 
 Namespace Models
+    <Authorize(Roles:="Admin")>
     Public Class ProductController
         Inherits System.Web.Mvc.Controller
 
@@ -21,6 +22,7 @@ Namespace Models
         End Function
 
         ' GET: Product/Details/5
+        <AllowAnonymous>
         Function Details(ByVal id As Integer?) As ActionResult
             If IsNothing(id) Then
                 Return New HttpStatusCodeResult(HttpStatusCode.BadRequest)
@@ -103,6 +105,8 @@ Namespace Models
             db.SaveChanges()
             Return RedirectToAction("Index")
         End Function
+
+
 
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
             If (disposing) Then
