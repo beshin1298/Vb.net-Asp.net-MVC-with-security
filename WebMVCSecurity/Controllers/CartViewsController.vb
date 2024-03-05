@@ -23,12 +23,10 @@ Namespace Controllers
 
         ' GET: CartViews
         Function Index() As ActionResult
-            Dim userId = User.Identity.GetUserId()
-            Dim cart As UserCart = db.UserCart.FirstOrDefault(Function(e) e.user_id = userId)
-            Dim cartId = cart.cart_id
-
+            Dim cartId As Integer = getCartId()
             Dim listItemInCart = (From c In db.CartView Where c.cart_id = cartId).ToList()
 
+            Session("numberOfCart") = listItemInCart.Count
             Return View(listItemInCart)
         End Function
 
@@ -55,13 +53,11 @@ Namespace Controllers
         <HttpPost()>
         <ActionName("AddToCart")>
         Function Create(ByVal cartView As CartView) As ActionResult
-            Dim userId = User.Identity.GetUserId()
-            Dim cart As UserCart = db.UserCart.FirstOrDefault(Function(e) e.user_id = userId)
-            Dim cartId = cart.cart_id
-            If Not cartView.product_id Or Not cartView.quantity < 1 Then
+
+            If ModelState.IsValid Then
+                Dim cartId As Integer = getCartId()
                 Dim cartViewTemp As CartView = db.CartView.Find(cartView.product_id, cartId)
                 If cartViewTemp Is Nothing Then
-                    cartView.cart_id = cartId
                     db.CartView.Add(cartView)
                     db.SaveChanges()
                 Else
@@ -71,10 +67,9 @@ Namespace Controllers
                     db.SaveChanges()
                 End If
 
-            Else Return New HttpStatusCodeResult(HttpStatusCode.BadRequest)
             End If
 
-            Return New HttpStatusCodeResult(HttpStatusCode.OK)
+            Return RedirectToAction("About", "Home")
 
 
         End Function
@@ -106,11 +101,12 @@ Namespace Controllers
         End Function
 
         ' GET: CartViews/Delete/5
-        Function Delete(ByVal id As Integer?) As ActionResult
-            If IsNothing(id) Then
+        Function Delete(ByVal productId As Integer?) As ActionResult
+
+            If IsNothing(productId) Then
                 Return New HttpStatusCodeResult(HttpStatusCode.BadRequest)
             End If
-            Dim cartView As CartView = db.CartView.Find(id)
+            Dim cartView As CartView = db.CartView.Find(productId)
             If IsNothing(cartView) Then
                 Return HttpNotFound()
             End If
@@ -121,11 +117,22 @@ Namespace Controllers
         <HttpPost()>
         <ActionName("Delete")>
         <ValidateAntiForgeryToken()>
-        Function DeleteConfirmed(ByVal id As Integer) As ActionResult
-            Dim cartView As CartView = db.CartView.Find(id)
+        Function DeleteConfirmed(ByVal productId As Integer) As ActionResult
+            Dim cartId As Integer = getCartId()
+            Dim cartView As CartView = db.CartView.Find(productId, cartId)
             db.CartView.Remove(cartView)
             db.SaveChanges()
             Return RedirectToAction("Index")
+        End Function
+
+        Private Function getCartId()
+            Dim userId = User.Identity.GetUserId()
+            If userId IsNot Nothing Then
+                Dim cart As UserCart = db.UserCart.FirstOrDefault(Function(e) e.user_id = userId)
+                Return cart.cart_id
+            Else Return New HttpStatusCodeResult(HttpStatusCode.BadRequest)
+            End If
+
         End Function
 
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)

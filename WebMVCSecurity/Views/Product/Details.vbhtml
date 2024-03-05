@@ -18,6 +18,7 @@ End Code
             <div class="main-description px-2">
                 <div class="category font-weight-bold">Category: @Model.category.name</div>
                 <h1 class="product-title">@Model.name</h1>
+                <div class="product-description">Price: @Model.price$</div>
                 <p class="product-description"> Quantity in warehouse: @Model.quantity</p>
 
             </div>

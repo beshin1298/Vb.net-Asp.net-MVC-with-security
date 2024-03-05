@@ -45,7 +45,8 @@ Namespace Models
         'more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         <HttpPost()>
         <ValidateAntiForgeryToken()>
-        Function Create(<Bind(Include:="product_id,name,quantity,category_id,image")> ByVal product As product) As ActionResult
+        Function Create(<Bind(Include:="product_id,name,quantity,price,category_id,image")> ByVal product As product) As ActionResult
+
             If ModelState.IsValid Then
                 db.product.Add(product)
                 db.SaveChanges()
@@ -73,7 +74,7 @@ Namespace Models
         'more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         <HttpPost()>
         <ValidateAntiForgeryToken()>
-        Function Edit(<Bind(Include:="product_id,name,quantity,category_id,image")> ByVal product As product) As ActionResult
+        Function Edit(<Bind(Include:="product_id,name,quantity,category_id,image, price")> ByVal product As product) As ActionResult
             If ModelState.IsValid Then
                 db.Entry(product).State = EntityState.Modified
                 db.SaveChanges()

@@ -275,6 +275,7 @@
     <Compile Include="Models\DatabaseContext.vb" />
     <Compile Include="Models\product.vb" />
     <Compile Include="Controllers\ProductController.vb" />
+    <Compile Include="Models\ProductCart.vb" />
     <Compile Include="Models\UserCart.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

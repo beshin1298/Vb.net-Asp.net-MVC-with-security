@@ -5,23 +5,30 @@ Public Class HomeController
 
     Private db As DatabaseContext = New DatabaseContext()
     Function Index() As ActionResult
-        Dim userId = User.Identity.GetUserId()
-        Dim cart As UserCart = db.UserCart.FirstOrDefault(Function(e) e.user_id = userId)
-        Dim cartId = cart.cart_id
-        Dim listItemInCart = (From c In db.CartView Where c.cart_id = cartId).ToList()
-        Session("numberOfCart") = listItemInCart.Count
-        Debug.WriteLine("-----", listItemInCart.Count)
 
+        If Request.IsAuthenticated Then
+            Dim userId = User.Identity.GetUserId()
+            Dim cart As UserCart = db.UserCart.FirstOrDefault(Function(e) e.user_id = userId)
+            Dim cartId = cart.cart_id
+            Dim listItemInCart = (From c In db.CartView Where c.cart_id = cartId).ToList()
+            Session("numberOfCart") = listItemInCart.Count
+        End If
 
 
         Return View()
     End Function
 
     Function About() As ActionResult
-        ViewData("Message") = "Your application description page."
+        ViewData("Message") = "My Shop"
 
         Dim listProducts As List(Of product) = db.product.ToList()
-        Return View(listProducts)
+        Dim userId = User.Identity.GetUserId()
+        Dim cart As UserCart = db.UserCart.FirstOrDefault(Function(e) e.user_id = userId)
+        Dim cartId = cart.cart_id
+        Dim listItemInCart = (From c In db.CartView Where c.cart_id = cartId).ToList()
+        Session("numberOfCart") = listItemInCart.Count
+        Dim productCart As ProductCart = New ProductCart With {.Products = listProducts}
+        Return View(productCart)
     End Function
 
     Function Contact() As ActionResult

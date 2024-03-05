@@ -34,6 +34,9 @@ End Using
         <th>
             @Html.DisplayNameFor(Function(model) model.category.name)
         </th>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.price)
+        </th>
         <th></th>
     </tr>
 
@@ -47,6 +50,8 @@ End Using
             </td>
             <td>
                 @Html.DisplayFor(Function(modelItem) item.category.name)
+            </td>   <td>
+                @Html.DisplayFor(Function(modelItem) item.price)$
             </td>
             <td>
                 <button type="button" class="btn btn-primary" onclick="window.location.href='@Url.Action("Edit", "Product", New With {.id = item.product_id})'">

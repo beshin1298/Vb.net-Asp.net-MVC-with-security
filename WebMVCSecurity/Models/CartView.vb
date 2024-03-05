@@ -13,5 +13,9 @@ Partial Public Class CartView
     <DatabaseGenerated(DatabaseGeneratedOption.None)>
     Public Property cart_id As Integer
 
+    <Range(1, 1000)>
+    <Required>
     Public Property quantity As Integer
+
+    Public Overridable Property Product As product
 End Class

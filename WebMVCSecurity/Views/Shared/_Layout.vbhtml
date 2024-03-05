@@ -11,7 +11,7 @@
 
 
 </head>
-<body>
+<body id="text">
     <nav class="navbar navbar-expand-lg navbar-toggleable-sm navbar-dark bg-danger">
         <div class="container">
             @Html.ActionLink("BESHIN APPLICATION", "Index", "Home", New With {.area = ""}, New With {.class = "navbar-brand"})
