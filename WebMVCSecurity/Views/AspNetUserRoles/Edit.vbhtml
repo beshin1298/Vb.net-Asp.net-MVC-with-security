@@ -6,9 +6,9 @@ End Code
 
 <h2>Edit</h2>
 
-@Using (Html.BeginForm())
+@Using (Html.BeginForm("Edit", "AspNetUserRoles", New With {.beforeRoleId = Model.RoleId}, FormMethod.Post))
     @Html.AntiForgeryToken()
-    
+
     @<div class="form-horizontal">
     <h4>AspNetUserRoles</h4>
     <hr />

@@ -1,4 +1,4 @@
-﻿@ModelType WebMVCSecurity.AspNetUserRoles
+﻿@ModelType WebMVCSecurity.category
 @Code
     ViewData("Title") = "Create"
     Layout = "~/Views/Shared/_Layout.vbhtml"
@@ -10,22 +10,22 @@ End Code
     @Html.AntiForgeryToken()
     
     @<div class="form-horizontal">
-        <h4>AspNetUserRoles</h4>
+        <h4>category</h4>
         <hr />
         @Html.ValidationSummary(True, "", New With { .class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(Function(model) model.UserId, htmlAttributes:= New With { .class = "control-label col-md-2" })
+            @Html.LabelFor(Function(model) model.category_id, htmlAttributes:= New With { .class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("UserId", Nothing, New With {.class = "form-control"})
-                @Html.ValidationMessageFor(Function(model) model.UserId, "", New With {.class = "text-danger"})
+                @Html.EditorFor(Function(model) model.category_id, New With { .htmlAttributes = New With { .class = "form-control" } })
+                @Html.ValidationMessageFor(Function(model) model.category_id, "", New With { .class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(Function(model) model.RoleId, "RoleId", htmlAttributes:= New With { .class = "control-label col-md-2" })
+            @Html.LabelFor(Function(model) model.name, htmlAttributes:= New With { .class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("RoleId", Nothing, htmlAttributes:= New With { .class = "form-control" })
-                @Html.ValidationMessageFor(Function(model) model.RoleId, "", New With { .class = "text-danger" })
+                @Html.EditorFor(Function(model) model.name, New With { .htmlAttributes = New With { .class = "form-control" } })
+                @Html.ValidationMessageFor(Function(model) model.name, "", New With { .class = "text-danger" })
             </div>
         </div>
 

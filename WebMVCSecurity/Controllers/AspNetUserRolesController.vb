@@ -1,5 +1,6 @@
 ﻿
 Imports System.Data.Entity
+Imports System.Data.SqlClient
 
 Imports System.Net
 
@@ -12,8 +13,8 @@ Namespace Controllers
 
         ' GET: AspNetUserRoles
         Function Index() As ActionResult
-            Dim aspNetUserRoles = db.AspNetUserRoles.Include(Function(a) a.AspNetRoles)
-            Return View(aspNetUserRoles.ToList())
+            Dim aspNetUserRoles As List(Of AspNetUserRoles) = db.AspNetUserRoles.Include(Function(a) a.AspNetRoles).ToList()
+            Return View(aspNetUserRoles)
         End Function
 
         ' GET: AspNetUserRoles/Details/5
@@ -31,6 +32,8 @@ Namespace Controllers
         ' GET: AspNetUserRoles/Create
         Function Create() As ActionResult
             ViewBag.RoleId = New SelectList(db.AspNetRoles, "Id", "Name")
+            ViewBag.UserId = New SelectList(db.AspNetUsers, "Id", "UserName")
+
             Return View()
         End Function
 
@@ -46,6 +49,8 @@ Namespace Controllers
                 Return RedirectToAction("Index")
             End If
             ViewBag.RoleId = New SelectList(db.AspNetRoles, "Id", "Name", aspNetUserRoles.RoleId)
+            ViewBag.UserId = New SelectList(db.AspNetUsers, "Id", "UserName", aspNetUserRoles.UserId)
+
             Return View(aspNetUserRoles)
         End Function
 
@@ -59,7 +64,8 @@ Namespace Controllers
                 Return HttpNotFound()
             End If
             ViewBag.RoleId = New SelectList(db.AspNetRoles, "Id", "Name", aspNetUserRoles.RoleId)
-            ViewBag.Users = New SelectList(db.AspNetUsers, "Id", "UserName", aspNetUserRoles.UserId)
+            ViewBag.UserId = New SelectList(db.AspNetUsers, "Id", "UserName", aspNetUserRoles.UserId)
+
             Return View(aspNetUserRoles)
         End Function
 
@@ -67,15 +73,22 @@ Namespace Controllers
         'To protect from overposting attacks, enable the specific properties you want to bind to, for 
         'more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         <HttpPost()>
+        <ActionName("Edit")>
         <ValidateAntiForgeryToken()>
-        Function Edit(<Bind(Include:="UserId,RoleId")> ByVal aspNetUserRoles As AspNetUserRoles) As ActionResult
+        Function Edit(<Bind(Include:="UserId,RoleId")> ByVal aspNetUserRoles As AspNetUserRoles, ByVal beforeRoleId As String) As ActionResult
 
             If ModelState.IsValid Then
-                db.Entry(aspNetUserRoles).State = EntityState.Modified
-                db.SaveChanges()
-                Return RedirectToAction("Index")
+                Dim query As String = "Update AspNetUserRoles Set RoleId = @roleId Where UserId = @userId and RoleId = @roleIdBefore"
+                Dim rowEffect As Integer = db.Database.ExecuteSqlCommand(query, New SqlParameter("@roleId", aspNetUserRoles.RoleId), New SqlParameter("@userId", aspNetUserRoles.UserId), New SqlParameter("@roleIdBefore", beforeRoleId))
+                If rowEffect > 0 Then
+                    Return RedirectToAction("Index")
+                Else
+                    Return New HttpStatusCodeResult(HttpStatusCode.BadRequest)
+                End If
             End If
             ViewBag.RoleId = New SelectList(db.AspNetRoles, "Id", "Name", aspNetUserRoles.RoleId)
+            ViewBag.UserId = New SelectList(db.AspNetUsers, "Id", "UserName", aspNetUserRoles.UserId)
+
             Return View(aspNetUserRoles)
         End Function
 

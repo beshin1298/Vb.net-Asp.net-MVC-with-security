@@ -6,7 +6,7 @@ End Code
 
 <h2>Products</h2>
 
-@Using (Html.BeginForm("Search", "categories", FormMethod.Post))
+@Using (Html.BeginForm("Search", "Product", FormMethod.Post))
     @Html.AntiForgeryToken()
     @<div class="d-flex gap-10">
         <div class="p-1">

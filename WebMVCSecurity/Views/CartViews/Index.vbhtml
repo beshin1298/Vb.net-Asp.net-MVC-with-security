@@ -59,10 +59,17 @@ End Code
                                                 </div>
 
                                                 <div Class="d-flex flex-row align-items-center">
-                                                    <div style="width: 50px;">
-                                                        <h5 class="fw-normal mb-0">@item.quantity</h5>
-                                                    </div>
-                                                    <div style="width: 80px;">
+                                                    @Using Html.BeginForm("Edit", "CartViews", New With {.productId = item.product_id}, FormMethod.Post)
+                                                        @Html.AntiForgeryToken()
+                                                        @<div style="width: 50px;" class="d-flex mx-4">
+                                                            <button class="btn btn-danger pt-1 px-1 h-25" value="decrease" type="submit" name="submitButton"> <i class="fa fa-minus" aria-hidden="true"></i></button>
+                                                            <h5 class="fw-normal p-1">@item.quantity</h5>
+                                                            <button class="pt-1 px-1 btn btn-warning h-25" value="increase" type="submit" name="submitButton"> <i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                        </div>
+                                                    End Using
+
+
+                                                    <div style="width: 80px;" class="text-end">
                                                         <h5 class="mb-0">
                                                             @Code
                                                                 Dim TotalProduct = item.Product.price * item.quantity
@@ -85,7 +92,7 @@ End Code
 
                                     </div>
 
-                                Next
+                                                                Next
                             </div>
                             <div Class="col-lg-5">
 

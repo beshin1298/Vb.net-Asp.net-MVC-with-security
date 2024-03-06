@@ -7,7 +7,7 @@ End Code
 <h2>DATA LIST</h2>
 
 
-@Using (Html.BeginForm("Search", "categories", FormMethod.Post))
+@Using (Html.BeginForm("Search", "Category", FormMethod.Post))
     @Html.AntiForgeryToken()
     @<div class="d-flex gap-10">
         <div class="p-1">
@@ -49,14 +49,14 @@ End Using
                     @Html.DisplayFor(Function(modelItem) item.name)
                 </td>
                 <td>
-                    <button type="button" class="btn btn-primary" onclick="window.location.href='@Url.Action("Edit", "categories", New With {.id = item.category_id})'">
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='@Url.Action("Edit", "Category", New With {.id = item.category_id})'">
                         <i class="fa fa-cog" aria-hidden="true"></i>
                     </button>
                     <button type="button" class="btn btn-success" onclick="window.location.href='@Url.Action("Details", "Category", New With {.id = item.category_id})'">
                         <i class="fa fa-info" aria-hidden="true"></i>
                     </button>
 
-                    <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Delete", "categories", New With {.id = item.category_id})'">
+                    <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Delete", "Category", New With {.id = item.category_id})'">
                         <i class="fa fa-trash-o" aria-hidden="true"></i>
 
                     </button>
@@ -67,6 +67,6 @@ End Using
 
 
 </table>
-<button type="button" Class="btn btn-primary" onclick="window.location.href='@Url.Action("Create", "categories")'">
+<button type="button" Class="btn btn-primary" onclick="window.location.href='@Url.Action("Create", "Category")'">
     <i Class="fa fa-plus" aria-hidden="true"></i>
 </button>

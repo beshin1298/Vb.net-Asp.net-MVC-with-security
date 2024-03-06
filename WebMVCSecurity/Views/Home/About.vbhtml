@@ -8,9 +8,16 @@ End Code
     <h2 id="title">@ViewData("Title").</h2>
     <h3>@ViewData("Message")</h3>
 
-    <div class="container mt-5">
+    <div class="container mt-5 ">
         <h1 class="mb-4">Danh sách sản phẩm</h1>
-        <div class="row">
+        @Using Html.BeginForm("Search", "Home", FormMethod.Post)
+            @<div Class="p-2">
+                @Html.DropDownList("category_id", Nothing, New With {.class = "form-control", .onchange = "this.form.submit()"})
+            </div>
+        End Using
+
+
+        <div Class="row">
             @For Each item In Model.Products
 
                 @<div Class="col-md-4 pb-5">
@@ -24,14 +31,16 @@ End Code
 
 
                             @Using (Html.BeginForm("AddToCart", "CartViews", FormMethod.Post))
+                                @Html.AntiForgeryToken()
                                 @<div Class="form-row align-items-center d-flex gap-2 form-group">
                                     @Html.ValidationSummary(True, "", New With {.class = "text-danger"})
                                     <div Class="p-2">
                                         <a href='@Url.Action("Details", "Product", New With {.id = item.product_id})' Class="btn btn-primary">Details</a>
                                     </div>
                                     <div Class="p-2">
-                                        @Html.HiddenFor(Function(model) item.product_id)
-                                        @Html.EditorFor(Function(model) model.CartView.quantity, "", New With {.htmlAttributes = New With {.class = "form-control"}})
+
+                                        @Html.HiddenFor(Function(model) model.CartView.product_id, New With {.Value = item.product_id, .htmlAttributes = New With {.class = "form-control"}})
+                                        @Html.EditorFor(Function(model) model.CartView.quantity, New With {.htmlAttributes = New With {.class = "form-control"}})
                                         @Html.ValidationMessageFor(Function(model) model.CartView.quantity, "", New With {.class = "text-danger"})
                                     </div>
                                     <div Class="p-2">
@@ -39,9 +48,6 @@ End Code
                                     </div>
                                 </div>
                             End Using
-
-
-
                         </div>
                     </div>
                 </div>
@@ -53,3 +59,6 @@ End Code
 
 </main>
 
+@Section Scripts
+    @Scripts.Render("~/bundles/jqueryval")
+End Section

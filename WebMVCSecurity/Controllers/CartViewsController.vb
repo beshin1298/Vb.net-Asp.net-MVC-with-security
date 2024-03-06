@@ -2,6 +2,7 @@
 Imports System.Collections.Generic
 Imports System.Data
 Imports System.Data.Entity
+Imports System.Data.SqlClient
 Imports System.Linq
 Imports System.Net
 Imports System.Web
@@ -25,7 +26,6 @@ Namespace Controllers
         Function Index() As ActionResult
             Dim cartId As Integer = getCartId()
             Dim listItemInCart = (From c In db.CartView Where c.cart_id = cartId).ToList()
-
             Session("numberOfCart") = listItemInCart.Count
             Return View(listItemInCart)
         End Function
@@ -52,12 +52,13 @@ Namespace Controllers
         'more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         <HttpPost()>
         <ActionName("AddToCart")>
-        Function Create(ByVal cartView As CartView) As ActionResult
-
+        <ValidateAntiForgeryToken()>
+        Function Create(<Bind(Include:="product_id,quantity")> ByVal cartView As CartView) As ActionResult
             If ModelState.IsValid Then
                 Dim cartId As Integer = getCartId()
                 Dim cartViewTemp As CartView = db.CartView.Find(cartView.product_id, cartId)
                 If cartViewTemp Is Nothing Then
+                    cartView.cart_id = cartId
                     db.CartView.Add(cartView)
                     db.SaveChanges()
                 Else
@@ -74,30 +75,40 @@ Namespace Controllers
 
         End Function
 
-        ' GET: CartViews/Edit/5
-        Function Edit(ByVal id As Integer?) As ActionResult
-            If IsNothing(id) Then
-                Return New HttpStatusCodeResult(HttpStatusCode.BadRequest)
-            End If
-            Dim cartView As CartView = db.CartView.Find(id)
-            If IsNothing(cartView) Then
-                Return HttpNotFound()
-            End If
-            Return View(cartView)
-        End Function
+
 
         ' POST: CartViews/Edit/5
         'To protect from overposting attacks, enable the specific properties you want to bind to, for 
         'more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         <HttpPost()>
         <ValidateAntiForgeryToken()>
-        Function Edit(<Bind(Include:="cart_id,product_id,quantity")> ByVal cartView As CartView) As ActionResult
-            If ModelState.IsValid Then
-                db.Entry(cartView).State = EntityState.Modified
-                db.SaveChanges()
-                Return RedirectToAction("Index")
+        Function Edit(ByVal productId As Integer) As ActionResult
+
+            If IsNothing(productId) Then
+                Return New HttpStatusCodeResult(HttpStatusCode.BadRequest)
             End If
-            Return View(cartView)
+
+            Dim CartId As Integer = getCartId()
+            Dim item As CartView = db.CartView.Where(Function(e) e.cart_id = CartId AndAlso e.product_id = productId).FirstOrDefault()
+            If item IsNot Nothing Then
+                If Request.Form("submitButton").Equals("decrease") Then
+                    If item.quantity <= 1 Then
+                        db.CartView.Remove(item)
+                        db.SaveChanges()
+                        Return RedirectToAction("Index")
+                    Else
+                        item.quantity -= 1
+                    End If
+
+                ElseIf Request.Form("submitButton").Equals("increase") Then
+                    item.quantity += 1
+                End If
+                db.Entry(item).State = EntityState.Modified
+                db.Entry(item).Property("quantity").IsModified = True
+                db.SaveChanges()
+
+            End If
+            Return RedirectToAction("Index")
         End Function
 
         ' GET: CartViews/Delete/5

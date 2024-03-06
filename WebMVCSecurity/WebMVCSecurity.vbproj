@@ -422,6 +422,9 @@
     <Content Include="Views\CartViews\Details.vbhtml" />
     <Content Include="Views\CartViews\Edit.vbhtml" />
     <Content Include="Views\CartViews\Index.vbhtml" />
+    <Content Include="Views\Category\Create.vbhtml" />
+    <Content Include="Views\Category\Edit.vbhtml" />
+    <Content Include="Views\Category\Delete.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

@@ -107,7 +107,20 @@ Namespace Models
             Return RedirectToAction("Index")
         End Function
 
+        <HttpPost()>
+        <ActionName("Search")>
+        <ValidateAntiForgeryToken()>
+        Function Search(SearchString As String) As ActionResult
+            Dim listProducts As List(Of product) = Nothing
 
+            If Not String.IsNullOrEmpty(SearchString) Then
+                listProducts = (From products In db.product Where products.name.ToLower().Contains(SearchString.ToLower())).ToList()
+            Else
+                listProducts = db.product.ToList()
+            End If
+
+            Return View("Index", listProducts)
+        End Function
 
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
             If (disposing) Then
