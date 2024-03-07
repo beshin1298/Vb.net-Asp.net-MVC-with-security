@@ -20,6 +20,7 @@ Partial Public Class DatabaseContext
     Public Overridable Property AspNetUsers As DbSet(Of AspNetUsers)
     Public Overridable Property UserCart As DbSet(Of UserCart)
     Public Overridable Property CartView As DbSet(Of CartView)
+    Public Overridable Property ComputerDevice As DbSet(Of ComputerDevice)
 
     Protected Overrides Sub OnModelCreating(ByVal modelBuilder As DbModelBuilder)
         modelBuilder.Entity(Of category)() _

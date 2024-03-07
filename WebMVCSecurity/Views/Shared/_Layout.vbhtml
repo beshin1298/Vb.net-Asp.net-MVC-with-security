@@ -27,14 +27,15 @@
                             @<li>@Html.ActionLink("Roles", "Index", "Roles", New With {.area = ""}, New With {.class = "nav-link"})</li>
                             @<li>@Html.ActionLink("Users", "Index", "AspNetUsers", New With {.area = ""}, New With {.class = "nav-link"})</li>
                             @<li>@Html.ActionLink("User role", "Index", "AspNetUserRoles", New With {.area = ""}, New With {.class = "nav-link"})</li>
+                            @<li>@Html.ActionLink("Categories", "Index", "Category", New With {.area = ""}, New With {.class = "nav-link"})</li>
+                            @<li>@Html.ActionLink("Products", "Index", "Product", New With {.area = ""}, New With {.class = "nav-link"})</li>
+                            @<li>@Html.ActionLink("Computer Devices", "Index", "ComputerDevices", New With {.area = ""}, New With {.class = "nav-link"})</li>
                         End If
-                        @<li>@Html.ActionLink("Categories", "Index", "Category", New With {.area = ""}, New With {.class = "nav-link"})</li>
 
-                        @<li>@Html.ActionLink("Products", "Index", "Product", New With {.area = ""}, New With {.class = "nav-link"})</li>
 
                     End If
                     <li>@Html.ActionLink("Contact", "Contact", "Home", New With {.area = ""}, New With {.class = "nav-link"})</li>
-                    
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

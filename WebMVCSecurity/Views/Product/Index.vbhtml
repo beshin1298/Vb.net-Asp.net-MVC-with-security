@@ -11,8 +11,9 @@ End Code
     @<div class="d-flex gap-10">
         <div class="p-1">
             @Html.TextBox("SearchString", Nothing, New With {.class = "form-control"})
-
         </div>
+       
+
         <div class="p-1">
             <button type="submit" class="btn btn-primary pa">
                 <i class="fa fa-search" aria-hidden="true"></i>
@@ -50,7 +51,8 @@ End Using
             </td>
             <td>
                 @Html.DisplayFor(Function(modelItem) item.category.name)
-            </td>   <td>
+            </td>
+            <td>
                 @Html.DisplayFor(Function(modelItem) item.price)$
             </td>
             <td>

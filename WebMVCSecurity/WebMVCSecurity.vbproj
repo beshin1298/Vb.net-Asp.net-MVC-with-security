@@ -257,6 +257,7 @@
     <Compile Include="Controllers\AspNetUsersController.vb" />
     <Compile Include="Controllers\CartViewsController.vb" />
     <Compile Include="Controllers\CategoryController.vb" />
+    <Compile Include="Controllers\ComputerDevicesController.vb" />
     <Compile Include="Controllers\ManageController.vb" />
     <Compile Include="Controllers\RolesController.vb" />
     <Compile Include="Global.asax.vb">
@@ -270,6 +271,7 @@
     <Compile Include="Models\AspNetUsers.vb" />
     <Compile Include="Models\CartView.vb" />
     <Compile Include="Models\category.vb" />
+    <Compile Include="Models\ComputerDevice.vb" />
     <Compile Include="Models\IdentityModels.vb" />
     <Compile Include="Models\ManageViewModels.vb" />
     <Compile Include="Models\DatabaseContext.vb" />
@@ -425,6 +427,11 @@
     <Content Include="Views\Category\Create.vbhtml" />
     <Content Include="Views\Category\Edit.vbhtml" />
     <Content Include="Views\Category\Delete.vbhtml" />
+    <Content Include="Views\ComputerDevices\Create.vbhtml" />
+    <Content Include="Views\ComputerDevices\Delete.vbhtml" />
+    <Content Include="Views\ComputerDevices\Details.vbhtml" />
+    <Content Include="Views\ComputerDevices\Edit.vbhtml" />
+    <Content Include="Views\ComputerDevices\Index.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
