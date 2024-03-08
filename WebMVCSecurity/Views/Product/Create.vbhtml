@@ -19,7 +19,7 @@ End Code
                 @Html.EditorFor(Function(model) model.product_id, New With {.htmlAttributes = New With {.class = "form-control"}})
                 @Html.ValidationMessageFor(Function(model) model.product_id, "", New With {.class = "text-danger"})
             </div>
-        </div>
+            </div>
 
         <div class="form-group">
             @Html.LabelFor(Function(model) model.name, htmlAttributes:=New With {.class = "control-label col-md-2"})

@@ -21,8 +21,6 @@ Partial Public Class ComputerDevice
 
     <Required>
     <DisplayName("Import Date")>
-    <Column("import_date", TypeName:="date")>
-    <DisplayFormat(DataFormatString:="{0:yyyy-MM-dd}", ApplyFormatInEditMode:=True)>
     Public Property import_date As Date
 
     <Required>

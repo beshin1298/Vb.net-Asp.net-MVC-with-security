@@ -29,7 +29,7 @@
                             @<li>@Html.ActionLink("User role", "Index", "AspNetUserRoles", New With {.area = ""}, New With {.class = "nav-link"})</li>
                             @<li>@Html.ActionLink("Categories", "Index", "Category", New With {.area = ""}, New With {.class = "nav-link"})</li>
                             @<li>@Html.ActionLink("Products", "Index", "Product", New With {.area = ""}, New With {.class = "nav-link"})</li>
-                            @<li>@Html.ActionLink("Computer Devices", "Index", "ComputerDevices", New With {.area = ""}, New With {.class = "nav-link"})</li>
+                            @<li>@Html.ActionLink("Computer Devices", "Index", "ComputerDevices", New With {.searchString = "", .includeDeleted = False}, New With {.class = "nav-link"})</li>
                         End If
 
 
