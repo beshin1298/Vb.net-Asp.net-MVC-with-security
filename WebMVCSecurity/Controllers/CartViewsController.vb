@@ -54,6 +54,10 @@ Namespace Controllers
         <ActionName("AddToCart")>
         <ValidateAntiForgeryToken()>
         Function Create(<Bind(Include:="product_id,quantity")> ByVal cartView As CartView) As ActionResult
+            Dim userId = User.Identity.GetUserId()
+            If userId Is Nothing Then
+                Return RedirectToAction("Login")
+            End If
             If ModelState.IsValid Then
                 Dim cartId As Integer = getCartId()
                 Dim cartViewTemp As CartView = db.CartView.Find(cartView.product_id, cartId)

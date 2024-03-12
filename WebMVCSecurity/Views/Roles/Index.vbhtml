@@ -48,7 +48,7 @@ End Using
                     <i class="fa fa-cog" aria-hidden="true"></i>
                 </button>
 
-                <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Delete", "Product", New With {.id = item.Id})'">
+                <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Delete", "Roles", New With {.id = item.Id})'">
                     <i class="fa fa-trash-o" aria-hidden="true"></i>
 
                 </button>
@@ -57,6 +57,6 @@ End Using
     Next
 
 </table>
-<button type="button" class="btn btn-primary" onclick="window.location.href='@Url.Action("Create", "Product")'">
+<button type="button" class="btn btn-primary" onclick="window.location.href='@Url.Action("Create", "Roles")'">
     <i class="fa fa-plus" aria-hidden="true"></i>
 </button>

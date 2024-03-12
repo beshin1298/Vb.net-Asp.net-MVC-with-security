@@ -18,6 +18,11 @@ End Code
 
 
         <div Class="row">
+            @Code
+                If Model.Products.Count = 0 Then
+                    @<div class="text-center">No products found!!!</div>
+                End If
+            End Code
             @For Each item In Model.Products
 
                 @<div Class="col-md-4 pb-5">

@@ -1,4 +1,5 @@
-﻿Imports System.Net
+﻿Imports System.Data.SqlClient
+Imports System.Net
 Imports System.Web.Mvc
 
 Namespace Controllers
@@ -33,10 +34,13 @@ Namespace Controllers
 
         ' POST: Roles/Create
         <HttpPost()>
-        Function Create(ByVal collection As FormCollection) As ActionResult
+        Function Create(<Bind(Include:="Id,Name")> ByVal role As AspNetRoles) As ActionResult
             Try
-                ' TODO: Add insert logic here
-
+                If ModelState.IsValid Then
+                    db.AspNetRoles.Add(role)
+                    db.SaveChanges()
+                    Return RedirectToAction("Index")
+                End If
                 Return RedirectToAction("Index")
             Catch
                 Return View()
@@ -57,9 +61,17 @@ Namespace Controllers
 
         ' POST: Roles/Edit/5
         <HttpPost()>
-        Function Edit(ByVal id As Integer, ByVal collection As FormCollection) As ActionResult
+        Function Edit(ByVal role As AspNetRoles) As ActionResult
             Try
-                ' TODO: Add update logic here
+                If ModelState.IsValid Then
+                    Dim query As String = "Update AspNetRoles Set Name = @Name Where Id = @Id"
+                    Dim rowEffect As Integer = db.Database.ExecuteSqlCommand(query, New SqlParameter("@Name", role.Id), New SqlParameter("@Id", role.Id))
+                    If rowEffect > 0 Then
+                        Return RedirectToAction("Index")
+                    Else
+                        Return New HttpStatusCodeResult(HttpStatusCode.BadRequest)
+                    End If
+                End If
 
                 Return RedirectToAction("Index")
             Catch

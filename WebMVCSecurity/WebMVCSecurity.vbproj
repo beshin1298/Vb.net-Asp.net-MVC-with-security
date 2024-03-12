@@ -432,6 +432,7 @@
     <Content Include="Views\ComputerDevices\Details.vbhtml" />
     <Content Include="Views\ComputerDevices\Edit.vbhtml" />
     <Content Include="Views\ComputerDevices\Index.vbhtml" />
+    <Content Include="Views\Roles\Create.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

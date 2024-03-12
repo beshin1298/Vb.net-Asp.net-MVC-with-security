@@ -97,7 +97,6 @@ Namespace Controllers
         <ActionName("Add-Column")>
         Function AddColumn(ByVal computerDevices As List(Of ComputerDevice)) As ActionResult
             Return View("Index", computerDevices)
-
         End Function
         <HttpPost()>
         <ActionName("Search")>

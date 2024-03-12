@@ -61,6 +61,10 @@ Public Class AccountController
         Dim result = Await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout := False)
         Select Case result
             Case SignInStatus.Success
+
+                If returnUrl IsNot Nothing AndAlso returnUrl.Equals("/CartViews/AddToCart") Then
+                    Return RedirectToAction("Index", "Home")
+                End If
                 Return RedirectToLocal(returnUrl)
             Case SignInStatus.LockedOut
                 Return View("Lockout")
