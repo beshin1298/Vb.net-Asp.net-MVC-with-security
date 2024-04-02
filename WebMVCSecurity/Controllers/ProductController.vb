@@ -1,21 +1,16 @@
-﻿Imports System
-Imports System.Collections.Generic
-Imports System.Data
-Imports System.Data.Entity
-Imports System.Linq
+﻿Imports System.Data.Entity
 Imports System.Net
-Imports System.Web
-Imports System.Web.Mvc
-Imports WebMVCSecurity
+Imports Microsoft.AspNet.Identity
 
 Namespace Models
-    <Authorize(Roles:="Admin")>
+
     Public Class ProductController
         Inherits System.Web.Mvc.Controller
 
         Private db As New DatabaseContext
 
         ' GET: Product
+        <Authorize(Roles:="Admin")>
         Function Index() As ActionResult
             Dim product = db.product.Include(Function(p) p.category)
             Return View(product.ToList())
@@ -35,6 +30,7 @@ Namespace Models
         End Function
 
         ' GET: Product/Create
+        <Authorize(Roles:="Admin")>
         Function Create() As ActionResult
             ViewBag.category_id = New SelectList(db.category, "category_id", "name")
             Return View()
@@ -44,6 +40,7 @@ Namespace Models
         'To protect from overposting attacks, enable the specific properties you want to bind to, for 
         'more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         <HttpPost()>
+        <Authorize(Roles:="Admin")>
         <ValidateAntiForgeryToken()>
         Function Create(<Bind(Include:="product_id,name,quantity,price,category_id,image")> ByVal product As product) As ActionResult
 
@@ -57,6 +54,7 @@ Namespace Models
         End Function
 
         ' GET: Product/Edit/5
+        <Authorize(Roles:="Admin")>
         Function Edit(ByVal id As Integer?) As ActionResult
             If IsNothing(id) Then
                 Return New HttpStatusCodeResult(HttpStatusCode.BadRequest)
@@ -74,6 +72,7 @@ Namespace Models
         'more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         <HttpPost()>
         <ValidateAntiForgeryToken()>
+        <Authorize(Roles:="Admin")>
         Function Edit(<Bind(Include:="product_id,name,quantity,category_id,image, price")> ByVal product As product) As ActionResult
             If ModelState.IsValid Then
                 db.Entry(product).State = EntityState.Modified
@@ -85,6 +84,7 @@ Namespace Models
         End Function
 
         ' GET: Product/Delete/5
+        <Authorize(Roles:="Admin")>
         Function Delete(ByVal id As Integer?) As ActionResult
             If IsNothing(id) Then
                 Return New HttpStatusCodeResult(HttpStatusCode.BadRequest)
@@ -100,6 +100,7 @@ Namespace Models
         <HttpPost()>
         <ActionName("Delete")>
         <ValidateAntiForgeryToken()>
+        <Authorize(Roles:="Admin")>
         Function DeleteConfirmed(ByVal id As Integer) As ActionResult
             Dim product As product = db.product.Find(id)
             db.product.Remove(product)
@@ -120,6 +121,31 @@ Namespace Models
             End If
 
             Return View("Index", listProducts)
+        End Function
+
+        <HttpPost()>
+        <ActionName("Comment")>
+        <ValidateAntiForgeryToken()>
+        <Authorize()>
+        Function PostComment(ByVal productId As Integer?, ByVal commentString As String) As ActionResult
+            If (Not String.IsNullOrEmpty(commentString) Or productId IsNot Nothing) Then
+                Dim userId As String = User.Identity.GetUserId()
+                If userId Is Nothing Then
+                    Return RedirectToAction("Login")
+                End If
+
+                Dim commentObj As New comment With {
+                    .userId = userId,
+                    .product_id = productId,
+                    .commentString = commentString
+                }
+                db.Comment.Add(commentObj)
+                db.SaveChanges()
+                Return RedirectToAction("Details", New With {.id = productId})
+
+
+            End If
+
         End Function
 
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)

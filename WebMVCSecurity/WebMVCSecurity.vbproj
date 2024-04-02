@@ -271,6 +271,7 @@
     <Compile Include="Models\AspNetUsers.vb" />
     <Compile Include="Models\CartView.vb" />
     <Compile Include="Models\category.vb" />
+    <Compile Include="Models\comment.vb" />
     <Compile Include="Models\ComputerDevice.vb" />
     <Compile Include="Models\IdentityModels.vb" />
     <Compile Include="Models\ManageViewModels.vb" />

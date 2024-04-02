@@ -1,8 +1,4 @@
-Imports System
-Imports System.ComponentModel.DataAnnotations.Schema
 Imports System.Data.Entity
-Imports System.Linq
-Imports Antlr.Runtime.Misc
 
 Partial Public Class DatabaseContext
     Inherits DbContext
@@ -21,6 +17,7 @@ Partial Public Class DatabaseContext
     Public Overridable Property UserCart As DbSet(Of UserCart)
     Public Overridable Property CartView As DbSet(Of CartView)
     Public Overridable Property ComputerDevice As DbSet(Of ComputerDevice)
+    Public Overridable Property Comment As DbSet(Of comment)
 
     Protected Overrides Sub OnModelCreating(ByVal modelBuilder As DbModelBuilder)
         modelBuilder.Entity(Of category)() _

@@ -27,4 +27,5 @@ Partial Public Class product
     Public Overridable Property category As category
 
     Public Overridable Property CartView As ICollection(Of CartView)
+    Public Overridable Property Comments As ICollection(Of comment)
 End Class
