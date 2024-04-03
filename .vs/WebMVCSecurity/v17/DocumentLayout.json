@@ -3,12 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\views\\product\\details.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\views\\product\\details.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\views\\ordersview\\createshipping.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\views\\ordersview\\createshipping.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\views\\shared\\_loginpartial.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\views\\shared\\_loginpartial.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\models\\order_shipping.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\models\\order_shipping.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\models\\databasecontext.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\models\\databasecontext.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\models\\ordersview.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\models\\ordersview.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\views\\ordersview\\index.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\views\\ordersview\\index.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\controllers\\ordersviewcontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\controllers\\ordersviewcontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\views\\category\\index.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\views\\category\\index.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\views\\view.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\views\\view.vbhtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\models\\aspnetroles.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\models\\aspnetroles.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\models\\computerdevice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\models\\computerdevice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\models\\order.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\models\\order.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\controllers\\productcontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
@@ -19,8 +55,8 @@
       "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\controllers\\categorycontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\controllers\\managecontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\controllers\\managecontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\controllers\\homecontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\controllers\\homecontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +66,188 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_LoginPartial.vbhtml",
-              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\Shared\\_LoginPartial.vbhtml",
-              "RelativeDocumentMoniker": "WebMVCSecurity\\Views\\Shared\\_LoginPartial.vbhtml",
-              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\Shared\\_LoginPartial.vbhtml",
-              "RelativeToolTip": "WebMVCSecurity\\Views\\Shared\\_LoginPartial.vbhtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "CreateShipping.vbhtml",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\OrdersView\\CreateShipping.vbhtml",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Views\\OrdersView\\CreateShipping.vbhtml",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\OrdersView\\CreateShipping.vbhtml",
+              "RelativeToolTip": "WebMVCSecurity\\Views\\OrdersView\\CreateShipping.vbhtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACAAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003381|",
-              "WhenOpened": "2024-04-02T10:34:12.243Z",
+              "WhenOpened": "2024-04-03T10:38:05.631Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ManageController.vb",
-              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\ManageController.vb",
-              "RelativeDocumentMoniker": "WebMVCSecurity\\Controllers\\ManageController.vb",
-              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\ManageController.vb",
-              "RelativeToolTip": "WebMVCSecurity\\Controllers\\ManageController.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "order_shipping.vb",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Models\\order_shipping.vb",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Models\\order_shipping.vb",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Models\\order_shipping.vb",
+              "RelativeToolTip": "WebMVCSecurity\\Models\\order_shipping.vb",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAIwBwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-04-02T09:14:17.911Z",
+              "WhenOpened": "2024-04-03T10:33:52.228Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CategoryController.vb",
-              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\CategoryController.vb",
-              "RelativeDocumentMoniker": "WebMVCSecurity\\Controllers\\CategoryController.vb",
-              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\CategoryController.vb",
-              "RelativeToolTip": "WebMVCSecurity\\Controllers\\CategoryController.vb",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAlAAAA",
+              "Title": "OrdersView.vb",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Models\\OrdersView.vb",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Models\\OrdersView.vb",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Models\\OrdersView.vb",
+              "RelativeToolTip": "WebMVCSecurity\\Models\\OrdersView.vb",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-04-02T09:13:50.161Z",
+              "WhenOpened": "2024-04-03T09:46:26.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.vbhtml",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\Category\\Index.vbhtml",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Views\\Category\\Index.vbhtml",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\Category\\Index.vbhtml",
+              "RelativeToolTip": "WebMVCSecurity\\Views\\Category\\Index.vbhtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003381|",
+              "WhenOpened": "2024-04-03T09:40:14.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "View.vbhtml",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\View.vbhtml",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Views\\View.vbhtml",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\View.vbhtml",
+              "RelativeToolTip": "WebMVCSecurity\\Views\\View.vbhtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003381|",
+              "WhenOpened": "2024-04-03T09:40:02.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ComputerDevice.vb",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Models\\ComputerDevice.vb",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Models\\ComputerDevice.vb",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Models\\ComputerDevice.vb",
+              "RelativeToolTip": "WebMVCSecurity\\Models\\ComputerDevice.vb",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-03T08:35:40.969Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "DatabaseContext.vb",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Models\\DatabaseContext.vb",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Models\\DatabaseContext.vb",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Models\\DatabaseContext.vb",
+              "RelativeToolTip": "WebMVCSecurity\\Models\\DatabaseContext.vb",
+              "ViewState": "AQIAAA4AAAAAAAAAAAA8wBUAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-03T08:35:39.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Order.vb",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Models\\Order.vb",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Models\\Order.vb",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Models\\Order.vb",
+              "RelativeToolTip": "WebMVCSecurity\\Models\\Order.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-03T08:35:33.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AspNetRoles.vb",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Models\\AspNetRoles.vb",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Models\\AspNetRoles.vb",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Models\\AspNetRoles.vb",
+              "RelativeToolTip": "WebMVCSecurity\\Models\\AspNetRoles.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-03T08:33:49.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CategoryController.vb",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\CategoryController.vb",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Controllers\\CategoryController.vb",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\CategoryController.vb",
+              "RelativeToolTip": "WebMVCSecurity\\Controllers\\CategoryController.vb",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-03T08:16:24.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HomeController.vb",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\HomeController.vb",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Controllers\\HomeController.vb",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\HomeController.vb",
+              "RelativeToolTip": "WebMVCSecurity\\Controllers\\HomeController.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-03T08:07:19.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.vbhtml",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\OrdersView\\Index.vbhtml",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Views\\OrdersView\\Index.vbhtml",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\OrdersView\\Index.vbhtml",
+              "RelativeToolTip": "WebMVCSecurity\\Views\\OrdersView\\Index.vbhtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003381|",
+              "WhenOpened": "2024-04-03T08:03:31.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "ProductController.vb",
               "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\ProductController.vb",
               "RelativeDocumentMoniker": "WebMVCSecurity\\Controllers\\ProductController.vb",
               "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\ProductController.vb",
               "RelativeToolTip": "WebMVCSecurity\\Controllers\\ProductController.vb",
-              "ViewState": "AQIAAIEAAAAAAAAAAAAiwIAAAAATAAAA",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAuwCcAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-04-02T09:05:59.239Z",
+              "WhenOpened": "2024-04-03T07:19:46.116Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Details.vbhtml",
-              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\Product\\Details.vbhtml",
-              "RelativeDocumentMoniker": "WebMVCSecurity\\Views\\Product\\Details.vbhtml",
-              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Views\\Product\\Details.vbhtml",
-              "RelativeToolTip": "WebMVCSecurity\\Views\\Product\\Details.vbhtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD8AAACvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003381|",
-              "WhenOpened": "2024-04-02T09:03:35.515Z",
+              "DocumentIndex": 5,
+              "Title": "OrdersViewController.vb",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\OrdersViewController.vb",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Controllers\\OrdersViewController.vb",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\OrdersViewController.vb",
+              "RelativeToolTip": "WebMVCSecurity\\Controllers\\OrdersViewController.vb",
+              "ViewState": "AQIAADAAAAAAAAAAAAAowDcAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-03T07:19:20.718Z",
               "EditorCaption": ""
             }
           ]

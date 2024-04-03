@@ -92,7 +92,7 @@ End Code
 
                                     </div>
 
-                                                                Next
+                                Next
                             </div>
                             <div Class="col-lg-5">
 
@@ -167,13 +167,15 @@ End Code
                                             <p Class="mb-2">Total(Of Incl. taxes)</p>
                                             <p Class="mb-2">@Total.ToString("0,0$")</p>
                                         </div>
+                                        @Using (Html.BeginForm("CreateOrder", "OrdersView"))
+                                            @<Button type="button" Class="btn btn-info btn-block btn-lg">
+                                                <div Class="d-block justify-content-between">
 
-                                        <Button type="button" Class="btn btn-info btn-block btn-lg">
-                                            <div Class="d-block justify-content-between">
-                                                <Span>@Total.ToString("0,0$")</Span>
-                                                <Span> Checkout <i Class="fas fa-long-arrow-alt-right ms-2"></i></Span>
-                                            </div>
-                                        </Button>
+                                                    <button type="submit"><Span> Checkout <i Class="fas fa-long-arrow-alt-right ms-2"></i></Span></button>
+                                                </div>
+                                            </Button>
+                                        End Using
+
 
                                     </div>
                                 </div>

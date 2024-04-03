@@ -1,19 +1,7 @@
-﻿Imports System
-Imports System.Collections.Generic
-Imports System.Data
-Imports System.Data.Entity
-Imports System.Data.SqlClient
-Imports System.Linq
+﻿Imports System.Data.Entity
 Imports System.Net
-Imports System.Web
-Imports System.Web.Mvc
-Imports System.Web.WebPages
-Imports Antlr.Runtime.Misc
 Imports Microsoft.AspNet.Identity
 
-Imports Microsoft.AspNet.Identity.Owin
-Imports Microsoft.AspNetCore.Identity
-Imports WebMVCSecurity
 
 Namespace Controllers
     <Authorize>

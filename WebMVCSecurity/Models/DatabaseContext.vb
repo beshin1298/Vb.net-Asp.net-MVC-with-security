@@ -18,6 +18,10 @@ Partial Public Class DatabaseContext
     Public Overridable Property CartView As DbSet(Of CartView)
     Public Overridable Property ComputerDevice As DbSet(Of ComputerDevice)
     Public Overridable Property Comment As DbSet(Of comment)
+    Public Overridable Property OdersView As DbSet(Of OrdersView)
+    Public Overridable Property OrderShpping As DbSet(Of order_shipping)
+
+
 
     Protected Overrides Sub OnModelCreating(ByVal modelBuilder As DbModelBuilder)
         modelBuilder.Entity(Of category)() _

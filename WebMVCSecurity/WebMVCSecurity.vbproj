@@ -259,6 +259,7 @@
     <Compile Include="Controllers\CategoryController.vb" />
     <Compile Include="Controllers\ComputerDevicesController.vb" />
     <Compile Include="Controllers\ManageController.vb" />
+    <Compile Include="Controllers\OrdersViewController.vb" />
     <Compile Include="Controllers\RolesController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
@@ -274,8 +275,11 @@
     <Compile Include="Models\comment.vb" />
     <Compile Include="Models\ComputerDevice.vb" />
     <Compile Include="Models\IdentityModels.vb" />
+    <Compile Include="Models\Order.vb" />
     <Compile Include="Models\ManageViewModels.vb" />
     <Compile Include="Models\DatabaseContext.vb" />
+    <Compile Include="Models\OrdersView.vb" />
+    <Compile Include="Models\order_shipping.vb" />
     <Compile Include="Models\product.vb" />
     <Compile Include="Controllers\ProductController.vb" />
     <Compile Include="Models\ProductCart.vb" />
@@ -420,10 +424,6 @@
     <Content Include="Views\AspNetUsers\Details.vbhtml" />
     <Content Include="Views\AspNetUsers\Edit.vbhtml" />
     <Content Include="Views\AspNetUsers\Index.vbhtml" />
-    <Content Include="Views\CartViews\Create.vbhtml" />
-    <Content Include="Views\CartViews\Delete.vbhtml" />
-    <Content Include="Views\CartViews\Details.vbhtml" />
-    <Content Include="Views\CartViews\Edit.vbhtml" />
     <Content Include="Views\CartViews\Index.vbhtml" />
     <Content Include="Views\Category\Create.vbhtml" />
     <Content Include="Views\Category\Edit.vbhtml" />
@@ -434,6 +434,9 @@
     <Content Include="Views\ComputerDevices\Edit.vbhtml" />
     <Content Include="Views\ComputerDevices\Index.vbhtml" />
     <Content Include="Views\Roles\Create.vbhtml" />
+    <Content Include="Views\View.vbhtml" />
+    <Content Include="Views\OrdersView\Index.vbhtml" />
+    <Content Include="Views\OrdersView\CreateShipping.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
