@@ -1,12 +1,5 @@
-﻿Imports System
-Imports System.Collections.Generic
-Imports System.Data
-Imports System.Data.Entity
-Imports System.Linq
+﻿Imports System.Data.Entity
 Imports System.Net
-Imports System.Web
-Imports System.Web.Mvc
-Imports WebMVCSecurity
 
 Namespace Controllers
     Public Class AspNetUsersController

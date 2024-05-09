@@ -1,6 +1,5 @@
 ﻿Imports System.Net
 Imports Microsoft.AspNet.Identity
-Imports Newtonsoft.Json.Linq
 
 Public Class HomeController
     Inherits System.Web.Mvc.Controller

@@ -1,10 +1,7 @@
-﻿Imports System.Globalization
-Imports System.Security.Claims
-Imports System.Threading.Tasks
+﻿Imports System.Threading.Tasks
 Imports Microsoft.AspNet.Identity
 Imports Microsoft.AspNet.Identity.Owin
 Imports Microsoft.Owin.Security
-Imports Owin
 
 <Authorize>
 Public Class AccountController

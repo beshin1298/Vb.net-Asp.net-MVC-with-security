@@ -1,5 +1,5 @@
-﻿Imports System.Threading.Tasks
-Imports System.Security.Claims
+﻿Imports System.Security.Claims
+Imports System.Threading.Tasks
 Imports Microsoft.AspNet.Identity
 Imports Microsoft.AspNet.Identity.EntityFramework
 Imports Microsoft.AspNet.Identity.Owin

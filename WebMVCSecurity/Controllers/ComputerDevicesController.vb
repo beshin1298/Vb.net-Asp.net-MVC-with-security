@@ -1,14 +1,7 @@
-﻿Imports System
-Imports System.Collections.Generic
-Imports System.Data
-Imports System.Data.Entity
-Imports System.Globalization
-Imports System.Linq
+﻿Imports System.Data.Entity
+Imports System.IO
 Imports System.Net
-Imports System.Web
-Imports System.Web.Mvc
-Imports Microsoft.Ajax.Utilities
-Imports WebMVCSecurity
+Imports ClosedXML.Excel
 
 Namespace Controllers
     <Authorize(Roles:="Admin")>
@@ -104,6 +97,35 @@ Namespace Controllers
             Session("searchName") = searchString
             Session("deletedSearch") = includeDeleted
             Return RedirectToAction("Index")
+        End Function
+
+        <HttpGet()>
+        <ActionName("Download")>
+        Function DownloadExcelFile()
+            Using dt As New DataTable("Student")
+                dt.Columns.AddRange(New DataColumn(3) {New DataColumn("Id", GetType(Integer)),
+                                                         New DataColumn("Quanity", GetType(Integer)),
+                                                         New DataColumn("Device name"),
+                                                         New DataColumn("Import date", GetType(String))
+                                                         })
+
+                Dim devices = db.ComputerDevice.ToList()
+
+                For Each device In devices
+                    dt.Rows.Add(device.id, device.quantity, device.name, device.import_date)
+                Next
+
+                Using wb As New XLWorkbook()
+                    Dim ws = wb.Worksheets.Add(dt)
+                    Using stream As New MemoryStream()
+                        ws.Columns().AdjustToContents()
+
+                        ws.Tables.FirstOrDefault().ShowAutoFilter = False
+                        wb.SaveAs(stream)
+                        Return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Student.xlsx")
+                    End Using
+                End Using
+            End Using
         End Function
 
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)

@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic.Devices
-Public Class ProductCart
+﻿Public Class ProductCart
     Public Property Products As IEnumerable(Of product)
     Public Property CartView As CartView
 

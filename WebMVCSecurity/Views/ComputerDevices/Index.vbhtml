@@ -42,79 +42,85 @@ End Using
 
 @Using (Html.BeginForm("Save", "ComputerDevices"))
     @<div Class="container mx-auto p-4 h-full">
-        <div Class="flex justify-center items-center h-full">
-            <!-- Table -->
-            <Table Class="table" id="my-table">
-                <thead>
-                    <!-- Resizable area -->
-                    <tr Class="text-sm font-semibold">
-                        <th>
-                            @Html.DisplayNameFor(Function(model) model.id)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(Function(model) model.name)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(Function(model) model.quantity)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(Function(model) model.import_date)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(Function(model) model.include_deleted)
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @For i As Integer = 0 To Model.Count - 1
-                        @<tr>
-                            <td>
-                                <input type="number" readonly name="[@i].id" id="[@i].id" value="@Model(i).id" class="form-control" />
-                            </td>
-                            <td>
-                                <input type="text" name="[@i].name" value="@Model(i).name" id="[@i].name" class="form-control" />
-                            </td>
-                            <td>
-                                <input type="number" name="[@i].quantity" id="[@i].quantity" value="@Model(i).quantity" class="form-control" required />
-                            </td>
-                            <td>
-                                <input type="date" name="[@i].import_date" id="[@i].import_date" value="@Model(i).import_date.ToString("yyyy-MM-dd")" class="form-control" />
-                            </td>
-                            <td class="text-center">
-                                <input type="checkbox" name="[@i].include_deleted" id="[@i].include_deleted" checked="@Model(i).include_deleted" value="@Model(i).include_deleted" onchange="test(@i)" class="form-check-input input-lg" />
-                            </td>
-                            <td>
-                                <input type="hidden" name="[@i].sort" id="[@i].sort" value="@Model(i).sort" class="form-check-input" />
-                            </td>
+    <div Class="flex justify-center items-center h-full">
+        <!-- Table -->
+        <Table Class="table" id="my-table">
+            <thead>
+                <!-- Resizable area -->
+                <tr Class="text-sm font-semibold">
+                    <th>
+                        @Html.DisplayNameFor(Function(model) model.id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(Function(model) model.name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(Function(model) model.quantity)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(Function(model) model.import_date)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(Function(model) model.include_deleted)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @For i As Integer = 0 To Model.Count - 1
+                    @<tr>
+                        <td>
+                            <input type="number" readonly name="[@i].id" id="[@i].id" value="@Model(i).id" class="form-control" />
+                        </td>
+                        <td>
+                            <input type="text" name="[@i].name" value="@Model(i).name" id="[@i].name" class="form-control" />
+                        </td>
+                        <td>
+                            <input type="number" name="[@i].quantity" id="[@i].quantity" value="@Model(i).quantity" class="form-control" required />
+                        </td>
+                        <td>
+                            <input type="date" name="[@i].import_date" id="[@i].import_date" value="@Model(i).import_date.ToString("yyyy-MM-dd")" class="form-control" />
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox" name="[@i].include_deleted" id="[@i].include_deleted" checked="@Model(i).include_deleted" value="@Model(i).include_deleted" onchange="test(@i)" class="form-check-input input-lg" />
+                        </td>
+                        <td>
+                            <input type="hidden" name="[@i].sort" id="[@i].sort" value="@Model(i).sort" class="form-check-input" />
+                        </td>
 
-                            <td>
-                                <button class="btn btn-toolbar" type="button">
-                                    <i class="fa fa-bars" aria-hidden="true"></i>
-                                </button>
-                            </td>
+                        <td>
+                            <button class="btn btn-toolbar" type="button">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                            </button>
+                        </td>
 
-                            <td class="text-center">
-                                @Code
-                                    If Model(i).id Is Nothing Then
-                                        @<Button type="button" Class="btn btn-danger" onclick="removeColumn(@i)"><i class="fa fa-trash"></i></Button>
-                                    End If
-                                End Code
+                        <td class="text-center">
+                            @Code
+                                If Model(i).id Is Nothing Then
+                                    @<Button type="button" Class="btn btn-danger" onclick="removeColumn(@i)"><i class="fa fa-trash"></i></Button>
+                                End If
+                            End Code
 
-                            </td>
-                        </tr>Next
-                    <tr><td><button class="btn btn-outline-success rounded-circle" type="button" onclick="addColumn()"><i class="fa fa-plus"></i></button></td></tr>
-                </tbody>
-            </Table>
-        </div>
+                        </td>
+                    </tr>Next
+                <tr><td><button class="btn btn-outline-success rounded-circle" type="button" onclick="addColumn()"><i class="fa fa-plus"></i></button></td></tr>
+            </tbody>
+        </Table>
     </div>
+    <button class="btn btn-primary" type="submit" onclick="saveData()">Save</button>
+    <a href="@Url.Action("Download", "ComputerDevices")" class="btn btn-success">
+        <i class="fas fa-long-arrow-alt-left me-2"></i>Download report
+    </a>
+</div>
 
-    @<button class="btn btn-primary" type="submit" onclick="saveData()">Save</button>
-    @<button class="btn btn-success" type="button" onclick="tableToCSV()">Export to excel</button>
-End Using
 
 
 
-<script>
+
+                                End Using
+
+
+
+    <script>
 
     var model = @Html.Raw(JsonConvert.SerializeObject(Model))
     for(let i = 0; i < model.length; i++) {
@@ -170,41 +176,41 @@ End Using
         let dd = today.getDate();
 
         if (dd < 10) dd = '0' + dd;
-        if (mm < 10) mm = '0' + mm;
+        If(mm < 10) mm = '0' + mm;
 
-        return yyyy + '-' + mm + '-' + dd;
+        Return yyyy + '-' + mm + '-' + dd;
 
     }
-    function saveData() {
-        for (let i = 0; i < model.length; i++) {
+    Function saveData() {
+        For (let i = 0; i < model.length; i++) {
             var checked = document.getElementById(`[${i}].include_deleted`).checked;
             document.getElementById(`[${i}].include_deleted`).value = checked
         }
     }
-    function test(i) {
+    Function test(i) {
         var checked = document.getElementById(`[${i}].include_deleted`).checked;
         document.getElementById(`[${i}].include_deleted`).value = checked
     }
     /////////////////////
-    function tableToCSV() {
+    Function tableToCSV() {
 
         // Variable to store the final csv data
         let csv_data = [];
 
         // Get each row data
         let rows = document.getElementsByTagName('tr');
-        for (let i = 0; i < rows.length; i++) {
+        For (let i = 0; i < rows.length; i++) {
 
             // Get each column data
-            
+
             let cols = rows[i].querySelectorAll('input');
             // Stores each csv row data
             let csvrow = [];
-           
-            for (let j = 0; j < cols.length - 1; j++) {
-               
+
+            For (let j = 0; j < cols.length - 1; j++) {
+
                 // Get the text data of each cell
-                // of a row and push it to csvrow
+                // of a row And push it to csvrow
                 csvrow.push(cols[j].value);
             }
 
@@ -212,21 +218,21 @@ End Using
             csv_data.push(csvrow.join(","));
         }
         csv_data.splice(0, 1)
-        csv_data.splice(0, 0,"Id,Device name,Quantity, Import Date, Deleted")
-        // Combine each row data with new line character
+                                                csv_data.splice(0, 0, "Id,Device name,Quantity, Import Date, Deleted")
+        // Combine each row data with New line character
         csv_data = csv_data.join('\n');
-     
+
         // Call this function to download csv file
         downloadCSVFile(csv_data);
 
     }
 
-    function downloadCSVFile(csv_data) {
+    Function downloadCSVFile(csv_data) {
 
-        // Create CSV file object and feed
+        // Create CSV file object And feed
         // our csv_data into it
-        CSVFile = new Blob([csv_data], {
-            type: "text/csv"
+        CSVFile = New Blob([csv_data], {
+            Type:       "text/csv"
         });
 
         // Create to temporary link to initiate
@@ -236,9 +242,9 @@ End Using
         // Download csv file
         temp_link.download = "File_Data.csv";
         let url = window.URL.createObjectURL(CSVFile);
-        temp_link.href = url;
+        temp_link.href = Url;
 
-        // This link should not be displayed
+        // This link should Not be displayed
         temp_link.style.display = "none";
         document.body.appendChild(temp_link);
 
@@ -250,47 +256,47 @@ End Using
 
 
   ///////////////////
-        // Get the table and its rows
-        var table = document.getElementById('my-table');
+        // Get the table And its rows
+        var Table = document.getElementById('my-table');
         var rows = table.rows;
         // Initialize the drag source element to null
         var dragSrcEl = null;
 
         // Loop through each row (skipping the first row which contains the table headers)
-    for (var i = 1; i < rows.length; i++) {
-            console.log(row)
-            var row = rows[i];
+    For (var i = 1; i < rows.length; i++) {
+            Console.log(row)
+                                            var row = rows[i];
             // Make each row draggable
-            row.draggable = true;
+            row.draggable = True;
 
             // Add an event listener for when the drag starts
             row.addEventListener('dragstart', function (e) {
-                console.log("start")
+                Console.log("start")
                 // Set the drag source element to the current row
                 dragSrcEl = this;
                 // Set the drag effect to "move"
                 e.dataTransfer.effectAllowed = 'move';
                 // Set the drag data to the outer HTML of the current row
                 e.dataTransfer.setData('text/html', this.outerHTML);
-                // Add a class to the current row to indicate it is being dragged
+                // Add a class to the current row to indicate it Is being dragged
                 this.classList.add('bg-gray-100');
             });
 
             // Add an event listener for when the drag ends
             row.addEventListener('dragend', function (e) {
-                // Remove the class indicating the row is being dragged
+                // Remove the class indicating the row Is being dragged
                 this.classList.remove('bg-gray-100');
                 // Remove the border classes from all table rows
-                table.querySelectorAll('.border-t-2', '.border-blue-300').forEach(function (el) {
+                Table.querySelectorAll('.border-t-2', '.border-blue-300').forEach(function (el) {
                     el.classList.remove('border-t-2', 'border-blue-300');
                 });
             });
 
-            // Add an event listener for when the dragged row is over another row
+            // Add an event listener for when the dragged row Is over another row
             row.addEventListener('dragover', function (e) {
                 // Prevent the default dragover behavior
                 e.preventDefault();
-                // Add border classes to the current row to indicate it is a drop target
+                // Add border classes to the current row to indicate it Is a drop target
                 this.classList.add('border-t-2', 'border-blue-300');
             });
 
@@ -298,7 +304,7 @@ End Using
             row.addEventListener('dragenter', function (e) {
                 // Prevent the default dragenter behavior
                 e.preventDefault();
-                // Add border classes to the current row to indicate it is a drop target
+                // Add border classes to the current row to indicate it Is a drop target
                 this.classList.add('border-t-2', 'border-blue-300');
             });
 
@@ -308,29 +314,29 @@ End Using
                 this.classList.remove('border-t-2', 'border-blue-300');
             });
 
-            // Add an event listener for when the dragged row is dropped onto another row
+            // Add an event listener for when the dragged row Is dropped onto another row
             row.addEventListener('drop', function (e) {
 
                 // Prevent the default drop behavior
                 e.preventDefault();
-                // If the drag source element is not the current row
-                if (dragSrcEl != this) {
+                // If the drag source element Is Not the current row
+                If (dragSrcEl! = this) Then {
                     // Get the index of the drag source element
                     var sourceIndex = dragSrcEl.rowIndex;
                     // Get the index of the target row
                     var targetIndex = this.rowIndex;
-                    // If the source index is less than the target index
-                    if (sourceIndex < targetIndex) {
+                    // If the source index Is less than the target index
+                    If (sourceIndex < targetIndex) Then {
                         // Insert the drag source element after the target row
-                        table.tBodies[0].insertBefore(dragSrcEl, this.nextSibling);
+                        Table.tBodies[0].insertBefore(dragSrcEl, this.nextSibling);
                     } else {
                         // Insert the drag source element before the target row
-                        table.tBodies[0].insertBefore(dragSrcEl, this);
+                        Table.tBodies[0].insertBefore(dragSrcEl, this);
                     }
-                    console.log("choose: " + sourceIndex + " target: " + targetIndex)
+                    Console.log("choose: " + sourceIndex + " target: " + targetIndex)
                 }
                 // Remove the border classes from all table rows
-                table.querySelectorAll('.border-t-2', '.border-blue-300').forEach(function (el) {
+                Table.querySelectorAll('.border-t-2', '.border-blue-300').forEach(function (el) {
                     el.classList.remove('border-t-2', 'border-blue-300');
                 });
             });
