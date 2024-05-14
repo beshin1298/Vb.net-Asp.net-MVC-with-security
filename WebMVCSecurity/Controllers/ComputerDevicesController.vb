@@ -102,7 +102,7 @@ Namespace Controllers
         <HttpGet()>
         <ActionName("Download")>
         Function DownloadExcelFile()
-            Using dt As New DataTable("Student")
+            Using dt As New DataTable("Devices")
                 dt.Columns.AddRange(New DataColumn(3) {New DataColumn("Id", GetType(Integer)),
                                                          New DataColumn("Quanity", GetType(Integer)),
                                                          New DataColumn("Device name"),
@@ -122,7 +122,7 @@ Namespace Controllers
 
                         ws.Tables.FirstOrDefault().ShowAutoFilter = False
                         wb.SaveAs(stream)
-                        Return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Student.xlsx")
+                        Return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Devices.xlsx")
                     End Using
                 End Using
             End Using

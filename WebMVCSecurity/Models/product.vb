@@ -20,6 +20,7 @@ Partial Public Class product
 
     Public Property image As String
 
+
     <Range(1, 1000)>
     <Required>
     Public Property price As Integer

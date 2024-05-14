@@ -135,7 +135,8 @@ Namespace Models
                 Dim commentObj As New comment With {
                     .userId = userId,
                     .product_id = productId,
-                    .commentString = commentString
+                    .commentString = commentString,
+                    .dateComment = DateTime.Now
                 }
                 db.Comment.Add(commentObj)
                 db.SaveChanges()

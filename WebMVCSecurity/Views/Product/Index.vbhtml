@@ -12,7 +12,7 @@ End Code
         <div class="p-1">
             @Html.TextBox("SearchString", Nothing, New With {.class = "form-control"})
         </div>
-       
+
 
         <div class="p-1">
             <button type="submit" class="btn btn-primary pa">
@@ -75,3 +75,5 @@ End Using
 <button type="button" class="btn btn-primary" onclick="window.location.href='@Url.Action("Create", "Product")'">
     <i class="fa fa-plus" aria-hidden="true"></i>
 </button>
+
+

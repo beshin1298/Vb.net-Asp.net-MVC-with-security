@@ -337,6 +337,7 @@
     <Compile Include="Controllers\CategoryController.vb" />
     <Compile Include="Controllers\ComputerDevicesController.vb" />
     <Compile Include="Controllers\ManageController.vb" />
+    <Compile Include="Controllers\NewsController.vb" />
     <Compile Include="Controllers\OrdersViewController.vb" />
     <Compile Include="Controllers\RolesController.vb" />
     <Compile Include="Global.asax.vb">
@@ -353,6 +354,7 @@
     <Compile Include="Models\comment.vb" />
     <Compile Include="Models\ComputerDevice.vb" />
     <Compile Include="Models\IdentityModels.vb" />
+    <Compile Include="Models\news.vb" />
     <Compile Include="Models\Order.vb" />
     <Compile Include="Models\ManageViewModels.vb" />
     <Compile Include="Models\DatabaseContext.vb" />
@@ -515,6 +517,11 @@
     <Content Include="Views\View.vbhtml" />
     <Content Include="Views\OrdersView\Index.vbhtml" />
     <Content Include="Views\OrdersView\CreateShipping.vbhtml" />
+    <Content Include="Views\News\Create.vbhtml" />
+    <Content Include="Views\News\Delete.vbhtml" />
+    <Content Include="Views\News\Details.vbhtml" />
+    <Content Include="Views\News\Edit.vbhtml" />
+    <Content Include="Views\News\Index.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

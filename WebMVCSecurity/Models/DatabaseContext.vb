@@ -20,6 +20,7 @@ Partial Public Class DatabaseContext
     Public Overridable Property Comment As DbSet(Of comment)
     Public Overridable Property OdersView As DbSet(Of OrdersView)
     Public Overridable Property OrderShpping As DbSet(Of order_shipping)
+    Public Overridable Property News As DbSet(Of news)
 
 
 

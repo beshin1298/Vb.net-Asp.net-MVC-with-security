@@ -15,6 +15,7 @@ Partial Public Class comment
 
     <Column("productId")>
     Public Property product_id As Integer
+    Public Property dateComment As Date
 
     Public Overridable Property product As product
     Public Overridable Property user As AspNetUsers

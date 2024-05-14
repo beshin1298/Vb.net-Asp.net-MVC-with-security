@@ -9,8 +9,9 @@ Public Class HomeController
         Dim cartId As Integer = getCartId()
         Dim countItemInCart As Integer = (From c In db.CartView Where c.cart_id = cartId).ToList().Count
         Session("numberOfCart") = countItemInCart
+        Dim newsList As List(Of news) = (From n In db.News).ToList()
 
-        Return View()
+        Return View(newsList)
     End Function
 
     Function About() As ActionResult

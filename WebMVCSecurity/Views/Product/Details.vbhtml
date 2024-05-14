@@ -42,10 +42,20 @@ End Code
                                              src="https://w7.pngwing.com/pngs/177/551/png-transparent-user-interface-design-computer-icons-default-stephen-salazar-graphy-user-interface-design-computer-wallpaper-sphere-thumbnail.png" alt="avatar" width="60"
                                              height="60" />
                                         <div>
-                                            <h6 Class="fw-bold mb-1">@item.user.UserName</h6>
+                                            <div style="display: block; width: 100%;">
+                                                <div>
+                                                    <h6 Class="fw-bold mb-1">@item.user.UserName</h6>
+                                                </div>
+                                                <div>
+                                                    <i style="text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);">@item.dateComment</i>
+                                                </div>
+                                                
+                                            </div>
+                                            
                                             <p Class="mb-0">
                                                 @item.commentString
                                             </p>
+                                           
                                         </div>
                                     </div>
                                     @<hr />
@@ -64,13 +74,9 @@ End Code
                                                 @Html.TextArea("commentString", Nothing, New With {.class = "form-control", .id = "comment", .style = "width:100%; heigth: 100%"})
                                                 <Button type="submit" onclick="checkComment(event)" Class="btn btn-warning mt-2 w-20">Comment</Button>
                                             </div>
-                                            
-
                                         </div>
                                     End Using
                                 End If
-
-
                             </div>
                         </div>
                     </div>
@@ -84,11 +90,11 @@ End Code
     </div>
 </div>
 <Script>
-                                Function checkComment(event) {
-                                            let commentStr = document.getElementById("comment").value;
-                                            If (commentStr.trim() === "") Then {
-                                                alert("Please comment something!");
-                                               Event.preventDefault();
-                                            }
-                                        }
+    function checkComment(event) {
+        let commentStr = document.getElementById("comment").value;
+        if (commentStr.trim() === "") {
+            alert("Please comment something!");
+            Event.preventDefault();
+        }
+    }
 </Script>
