@@ -1,5 +1,6 @@
 ﻿Imports System.Data.Entity
 Imports System.Net
+Imports Microsoft.AspNet.Identity
 
 Namespace Controllers
     Public Class AspNetUsersController
@@ -38,8 +39,10 @@ Namespace Controllers
             If ModelState.IsValid Then
                 db.AspNetUsers.Add(aspNetUsers)
                 db.SaveChanges()
+                StoreActionEvent("Create userId: " + aspNetUsers.Id)
                 Return RedirectToAction("Index")
             End If
+            StoreActionEvent("create userId: " + aspNetUsers.Id)
             Return View(aspNetUsers)
         End Function
 
@@ -66,6 +69,7 @@ Namespace Controllers
                 db.SaveChanges()
                 Return RedirectToAction("Index")
             End If
+            StoreActionEvent("Edit userId: " + aspNetUsers.Id)
             Return View(aspNetUsers)
         End Function
 
@@ -89,6 +93,7 @@ Namespace Controllers
             Dim aspNetUsers As AspNetUsers = db.AspNetUsers.Find(id)
             db.AspNetUsers.Remove(aspNetUsers)
             db.SaveChanges()
+            StoreActionEvent("Delete userId: " + id)
             Return RedirectToAction("Index")
         End Function
 
@@ -97,6 +102,17 @@ Namespace Controllers
                 db.Dispose()
             End If
             MyBase.Dispose(disposing)
+        End Sub
+        Sub StoreActionEvent(actionEvent As String)
+            Dim userId = User.Identity.GetUserId()
+            Dim userLog As user_log_action
+            userLog = New user_log_action With {
+                    .user_id = userId,
+                    .action_name = actionEvent,
+                    .action_time = DateTime.Now
+                }
+            db.UserLogAction.Add(userLog)
+            db.SaveChanges()
         End Sub
     End Class
 End Namespace

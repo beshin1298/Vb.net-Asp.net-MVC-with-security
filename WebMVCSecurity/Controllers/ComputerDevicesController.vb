@@ -2,6 +2,7 @@
 Imports System.IO
 Imports System.Net
 Imports ClosedXML.Excel
+Imports Microsoft.AspNet.Identity
 
 Namespace Controllers
     <Authorize(Roles:="Admin")>
@@ -49,6 +50,7 @@ Namespace Controllers
             Dim computerDevice As ComputerDevice = db.ComputerDevice.Find(id)
             db.ComputerDevice.Remove(computerDevice)
             db.SaveChanges()
+            StoreActionEvent("Delete computer device id: " + id)
             Return RedirectToAction("Index")
         End Function
 
@@ -77,7 +79,8 @@ Namespace Controllers
                                                  End If
                                              End Function)
 
-            db.SaveChanges() ' Save changes after processing all items
+            db.SaveChanges()
+            StoreActionEvent("Save list devices")
             Return View("Index", computerDevices)
         End Function
 
@@ -122,6 +125,7 @@ Namespace Controllers
 
                         ws.Tables.FirstOrDefault().ShowAutoFilter = False
                         wb.SaveAs(stream)
+                        StoreActionEvent("Export file excel list devices")
                         Return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Devices.xlsx")
                     End Using
                 End Using
@@ -133,6 +137,17 @@ Namespace Controllers
                 db.Dispose()
             End If
             MyBase.Dispose(disposing)
+        End Sub
+        Sub StoreActionEvent(actionEvent As String)
+            Dim userId = User.Identity.GetUserId()
+            Dim userLog As user_log_action
+            userLog = New user_log_action With {
+                    .user_id = userId,
+                    .action_name = actionEvent,
+                    .action_time = DateTime.Now
+                }
+            db.UserLogAction.Add(userLog)
+            db.SaveChanges()
         End Sub
     End Class
 End Namespace

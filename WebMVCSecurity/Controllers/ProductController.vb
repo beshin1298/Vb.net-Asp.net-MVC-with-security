@@ -45,6 +45,7 @@ Namespace Models
             If ModelState.IsValid Then
                 db.product.Add(product)
                 db.SaveChanges()
+                StoreActionEvent("create new product " + product.name)
                 Return RedirectToAction("Index")
             End If
             ViewBag.category_id = New SelectList(db.category, "category_id", "name", product.category_id)
@@ -75,6 +76,7 @@ Namespace Models
             If ModelState.IsValid Then
                 db.Entry(product).State = EntityState.Modified
                 db.SaveChanges()
+                StoreActionEvent("edit productId " + product.product_id)
                 Return RedirectToAction("Index")
             End If
             ViewBag.category_id = New SelectList(db.category, "category_id", "name", product.category_id)
@@ -103,6 +105,7 @@ Namespace Models
             Dim product As product = db.product.Find(id)
             db.product.Remove(product)
             db.SaveChanges()
+            StoreActionEvent("delete productId " + id)
             Return RedirectToAction("Index")
         End Function
 
@@ -140,6 +143,7 @@ Namespace Models
                 }
                 db.Comment.Add(commentObj)
                 db.SaveChanges()
+                StoreActionEvent(" post comment of productId " + productId)
                 Return RedirectToAction("Details", New With {.id = productId})
 
 
@@ -152,6 +156,17 @@ Namespace Models
                 db.Dispose()
             End If
             MyBase.Dispose(disposing)
+        End Sub
+        Sub StoreActionEvent(actionEvent As String)
+            Dim userId = User.Identity.GetUserId()
+            Dim userLog As user_log_action
+            userLog = New user_log_action With {
+                    .user_id = userId,
+                    .action_name = actionEvent,
+                    .action_time = DateTime.Now
+                }
+            db.UserLogAction.Add(userLog)
+            db.SaveChanges()
         End Sub
     End Class
 End Namespace

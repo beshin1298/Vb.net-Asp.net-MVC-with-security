@@ -53,10 +53,11 @@ Namespace Controllers
                     cartView.cart_id = cartId
                     db.CartView.Add(cartView)
                     db.SaveChanges()
+                    StoreActionEvent("Add to cart, productId: " + cartView.product_id)
                 Else
                     cartViewTemp.quantity += cartView.quantity
                     db.Entry(cartViewTemp).State = EntityState.Modified
-
+                    StoreActionEvent("Add to cart, productId: " + cartView.product_id)
                     db.SaveChanges()
                 End If
 
@@ -87,6 +88,7 @@ Namespace Controllers
                     If item.quantity <= 1 Then
                         db.CartView.Remove(item)
                         db.SaveChanges()
+                        StoreActionEvent("Edit in cart, productId: " + item.product_id)
                         Return RedirectToAction("Index")
                     Else
                         item.quantity -= 1
@@ -97,6 +99,7 @@ Namespace Controllers
                 End If
                 db.Entry(item).State = EntityState.Modified
                 db.Entry(item).Property("quantity").IsModified = True
+                StoreActionEvent("Edit in cart, productId: " + item.product_id)
                 db.SaveChanges()
 
             End If
@@ -125,6 +128,7 @@ Namespace Controllers
             Dim cartView As CartView = db.CartView.Find(productId, cartId)
             db.CartView.Remove(cartView)
             db.SaveChanges()
+            StoreActionEvent("delete in cart, productId: " + productId)
             Return RedirectToAction("Index")
         End Function
 
@@ -143,6 +147,17 @@ Namespace Controllers
                 db.Dispose()
             End If
             MyBase.Dispose(disposing)
+        End Sub
+        Sub StoreActionEvent(actionEvent As String)
+            Dim userId = User.Identity.GetUserId()
+            Dim userLog As user_log_action
+            userLog = New user_log_action With {
+                    .user_id = userId,
+                    .action_name = actionEvent,
+                    .action_time = DateTime.Now
+                }
+            db.UserLogAction.Add(userLog)
+            db.SaveChanges()
         End Sub
     End Class
 End Namespace

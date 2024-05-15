@@ -8,7 +8,7 @@ Public Class AccountController
     Inherits Controller
     Private _signInManager As ApplicationSignInManager
     Private _userManager As ApplicationUserManager
-
+    Private db As New DatabaseContext
     Public Sub New()
     End Sub
 
@@ -58,7 +58,6 @@ Public Class AccountController
         Dim result = Await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout := False)
         Select Case result
             Case SignInStatus.Success
-
                 If returnUrl IsNot Nothing AndAlso returnUrl.Equals("/CartViews/AddToCart") Then
                     Return RedirectToAction("Index", "Home")
                 End If

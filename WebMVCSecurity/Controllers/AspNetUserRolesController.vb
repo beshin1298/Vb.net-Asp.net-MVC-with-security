@@ -3,6 +3,7 @@ Imports System.Data.Entity
 Imports System.Data.SqlClient
 
 Imports System.Net
+Imports Microsoft.AspNet.Identity
 
 
 Namespace Controllers
@@ -33,7 +34,6 @@ Namespace Controllers
         Function Create() As ActionResult
             ViewBag.RoleId = New SelectList(db.AspNetRoles, "Id", "Name")
             ViewBag.UserId = New SelectList(db.AspNetUsers, "Id", "UserName")
-
             Return View()
         End Function
 
@@ -46,6 +46,7 @@ Namespace Controllers
             If ModelState.IsValid Then
                 db.AspNetUserRoles.Add(aspNetUserRoles)
                 db.SaveChanges()
+                StoreActionEvent("Create role userId: " + aspNetUserRoles.UserId)
                 Return RedirectToAction("Index")
             End If
             ViewBag.RoleId = New SelectList(db.AspNetRoles, "Id", "Name", aspNetUserRoles.RoleId)
@@ -81,6 +82,7 @@ Namespace Controllers
                 Dim query As String = "Update AspNetUserRoles Set RoleId = @roleId Where UserId = @userId and RoleId = @roleIdBefore"
                 Dim rowEffect As Integer = db.Database.ExecuteSqlCommand(query, New SqlParameter("@roleId", aspNetUserRoles.RoleId), New SqlParameter("@userId", aspNetUserRoles.UserId), New SqlParameter("@roleIdBefore", beforeRoleId))
                 If rowEffect > 0 Then
+                    StoreActionEvent("Edit role userId: " + aspNetUserRoles.UserId)
                     Return RedirectToAction("Index")
                 Else
                     Return New HttpStatusCodeResult(HttpStatusCode.BadRequest)
@@ -112,6 +114,7 @@ Namespace Controllers
             Dim aspNetUserRoles As AspNetUserRoles = (From userRoles In db.AspNetUserRoles Where userRoles.UserId = id And userRoles.RoleId = roleId).SingleOrDefault()
             db.AspNetUserRoles.Remove(aspNetUserRoles)
             db.SaveChanges()
+            StoreActionEvent("Delete userId: " + id)
             Return RedirectToAction("Index")
         End Function
 
@@ -121,5 +124,17 @@ Namespace Controllers
             End If
             MyBase.Dispose(disposing)
         End Sub
+        Sub StoreActionEvent(actionEvent As String)
+            Dim userId = User.Identity.GetUserId()
+            Dim userLog As user_log_action
+            userLog = New user_log_action With {
+                    .user_id = userId,
+                    .action_name = actionEvent,
+                    .action_time = DateTime.Now
+                }
+            db.UserLogAction.Add(userLog)
+            db.SaveChanges()
+        End Sub
     End Class
+
 End Namespace

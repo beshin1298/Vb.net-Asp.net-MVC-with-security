@@ -1,5 +1,6 @@
 ﻿Imports System.Data.Entity
 Imports System.Net
+Imports Microsoft.AspNet.Identity
 
 Namespace Controllers
     Public Class NewsController
@@ -39,6 +40,7 @@ Namespace Controllers
                 news.releaseDate = DateTime.Now
                 db.News.Add(news)
                 db.SaveChanges()
+                StoreActionEvent("create news : " + news.title)
                 Return RedirectToAction("Index")
             End If
             Return View(news)
@@ -65,6 +67,7 @@ Namespace Controllers
             If ModelState.IsValid Then
                 db.Entry(news).State = EntityState.Modified
                 db.SaveChanges()
+                StoreActionEvent("Edit news id: " + news.id)
                 Return RedirectToAction("Index")
             End If
             Return View(news)
@@ -90,6 +93,7 @@ Namespace Controllers
             Dim news As news = db.News.Find(id)
             db.News.Remove(news)
             db.SaveChanges()
+            StoreActionEvent("Delete news id: " + id)
             Return RedirectToAction("Index")
         End Function
 
@@ -98,6 +102,17 @@ Namespace Controllers
                 db.Dispose()
             End If
             MyBase.Dispose(disposing)
+        End Sub
+        Sub StoreActionEvent(actionEvent As String)
+            Dim userId = User.Identity.GetUserId()
+            Dim userLog As user_log_action
+            userLog = New user_log_action With {
+                    .user_id = userId,
+                    .action_name = actionEvent,
+                    .action_time = DateTime.Now
+                }
+            db.UserLogAction.Add(userLog)
+            db.SaveChanges()
         End Sub
     End Class
 End Namespace

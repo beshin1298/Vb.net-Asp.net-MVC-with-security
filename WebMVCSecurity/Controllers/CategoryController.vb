@@ -1,5 +1,6 @@
 ﻿Imports System.Data.Entity
 Imports System.Net
+Imports Microsoft.AspNet.Identity
 
 
 Namespace Controllers
@@ -39,6 +40,7 @@ Namespace Controllers
             If ModelState.IsValid Then
                 db.category.Add(category)
                 db.SaveChanges()
+                StoreActionEvent("create new category: " + category.name)
                 Return RedirectToAction("Index")
             End If
             Return View(category)
@@ -63,6 +65,7 @@ Namespace Controllers
             If ModelState.IsValid Then
                 db.Entry(category).State = EntityState.Modified
                 db.SaveChanges()
+                StoreActionEvent("Edit categoryId: " + category.category_id)
                 Return RedirectToAction("Index")
             End If
             Return View(category)
@@ -85,10 +88,10 @@ Namespace Controllers
         <ValidateAntiForgeryToken()>
         Function Delete(ByVal id As Integer, ByVal collection As FormCollection) As ActionResult
             Dim category As category = db.category.Find(id)
-
             Try
                 db.category.Remove(category)
                 db.SaveChanges()
+                StoreActionEvent("Delete categoryId: " + id)
                 Return RedirectToAction("Index")
             Catch ex As Exception
                 TempData("ErrorMessage") = "Có lỗi xảy ra."
@@ -111,5 +114,16 @@ Namespace Controllers
 
             Return View("Index", listCategories)
         End Function
+        Sub StoreActionEvent(actionEvent As String)
+            Dim userId = User.Identity.GetUserId()
+            Dim userLog As user_log_action
+            userLog = New user_log_action With {
+                    .user_id = userId,
+                    .action_name = actionEvent,
+                    .action_time = DateTime.Now
+                }
+            db.UserLogAction.Add(userLog)
+            db.SaveChanges()
+        End Sub
     End Class
 End Namespace

@@ -21,6 +21,7 @@ Partial Public Class DatabaseContext
     Public Overridable Property OdersView As DbSet(Of OrdersView)
     Public Overridable Property OrderShpping As DbSet(Of order_shipping)
     Public Overridable Property News As DbSet(Of news)
+    Public Overridable Property UserLogAction As DbSet(Of user_log_action)
 
 
 
