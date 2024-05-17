@@ -147,3 +147,11 @@ C:\Users\FanaticVn\source\repos\WebMVCSecurity\WebMVCSecurity\bin\ExcelNumberFor
 C:\Users\FanaticVn\source\repos\WebMVCSecurity\WebMVCSecurity\bin\ServiceStack.Text.xml
 C:\Users\FanaticVn\source\repos\WebMVCSecurity\WebMVCSecurity\bin\SixLabors.Fonts.xml
 C:\Users\FanaticVn\source\repos\WebMVCSecurity\WebMVCSecurity\bin\System.IO.Packaging.xml
+C:\Users\FanaticVn\source\repos\WebMVCSecurity\WebMVCSecurity\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\FanaticVn\source\repos\WebMVCSecurity\WebMVCSecurity\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\FanaticVn\source\repos\WebMVCSecurity\WebMVCSecurity\bin\Microsoft.Practices.Unity.dll
+C:\Users\FanaticVn\source\repos\WebMVCSecurity\WebMVCSecurity\bin\Unity.Mvc3.dll
+C:\Users\FanaticVn\source\repos\WebMVCSecurity\WebMVCSecurity\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\FanaticVn\source\repos\WebMVCSecurity\WebMVCSecurity\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\FanaticVn\source\repos\WebMVCSecurity\WebMVCSecurity\bin\Microsoft.Practices.Unity.xml
+C:\Users\FanaticVn\source\repos\WebMVCSecurity\WebMVCSecurity\bin\Microsoft.Practices.Unity.Configuration.xml

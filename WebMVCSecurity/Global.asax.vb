@@ -1,4 +1,5 @@
-Imports System.Web.Optimization
+﻿Imports System.Web.Optimization
+Imports Microsoft.Practices.Unity
 
 Public Class MvcApplication
     Inherits System.Web.HttpApplication
@@ -8,5 +9,8 @@ Public Class MvcApplication
         FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters)
         RouteConfig.RegisterRoutes(RouteTable.Routes)
         BundleConfig.RegisterBundles(BundleTable.Bundles)
+        Dim container As New UnityContainer()
+
     End Sub
+
 End Class

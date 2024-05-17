@@ -7,15 +7,23 @@
       "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\controllers\\productcontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\controllers\\rolescontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\controllers\\rolescontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\service\\productservice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\service\\productservice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\controllers\\ordersviewcontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\service\\productrepo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\service\\productrepo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\global.asax.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\global.asax.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\webmvcsecurity\\controllers\\ordersviewcontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\controllers\\ordersviewcontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|c:\\users\\fanaticvn\\source\\repos\\webmvcsecurity\\webmvcsecurity\\controllers\\newscontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\webmvcsecurity\\controllers\\newscontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{68776EC7-DFC4-4B7C-9A50-B0566A939744}|WebMVCSecurity\\WebMVCSecurity.vbproj|solutionrelative:webmvcsecurity\\controllers\\newscontroller.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
@@ -26,19 +34,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RolesController.vb",
-              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\RolesController.vb",
-              "RelativeDocumentMoniker": "WebMVCSecurity\\Controllers\\RolesController.vb",
-              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\RolesController.vb",
-              "RelativeToolTip": "WebMVCSecurity\\Controllers\\RolesController.vb",
-              "ViewState": "AQIAADQAAAAAAAAAAAAcwAAAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "Global.asax.vb",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Global.asax.vb",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Global.asax.vb",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Global.asax.vb",
+              "RelativeToolTip": "WebMVCSecurity\\Global.asax.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-05-15T09:00:58.648Z",
+              "WhenOpened": "2024-05-17T09:31:13.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductService.vb",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Service\\ProductService.vb",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Service\\ProductService.vb",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Service\\ProductService.vb",
+              "RelativeToolTip": "WebMVCSecurity\\Service\\ProductService.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-17T09:28:23.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductRepo.vb",
+              "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Service\\ProductRepo.vb",
+              "RelativeDocumentMoniker": "WebMVCSecurity\\Service\\ProductRepo.vb",
+              "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Service\\ProductRepo.vb",
+              "RelativeToolTip": "WebMVCSecurity\\Service\\ProductRepo.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-17T09:27:12.807Z",
               "EditorCaption": ""
             },
             {
@@ -49,14 +83,14 @@
               "RelativeDocumentMoniker": "WebMVCSecurity\\Controllers\\ProductController.vb",
               "ToolTip": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\ProductController.vb",
               "RelativeToolTip": "WebMVCSecurity\\Controllers\\ProductController.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAWAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAiwBkAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-05-15T09:00:52.405Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "OrdersViewController.vb",
               "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\OrdersViewController.vb",
               "RelativeDocumentMoniker": "WebMVCSecurity\\Controllers\\OrdersViewController.vb",
@@ -69,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "NewsController.vb",
               "DocumentMoniker": "C:\\Users\\FanaticVn\\source\\repos\\WebMVCSecurity\\WebMVCSecurity\\Controllers\\NewsController.vb",
               "RelativeDocumentMoniker": "WebMVCSecurity\\Controllers\\NewsController.vb",

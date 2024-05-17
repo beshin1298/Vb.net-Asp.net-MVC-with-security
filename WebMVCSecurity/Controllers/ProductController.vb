@@ -8,12 +8,12 @@ Namespace Models
         Inherits System.Web.Mvc.Controller
 
         Private db As New DatabaseContext
+        Private productService As New ProductService
 
         ' GET: Product
         <Authorize(Roles:="Admin")>
         Function Index() As ActionResult
-            Dim product = db.product.Include(Function(p) p.category)
-            Return View(product.ToList())
+            Return View(productService.GetAllListProduct())
         End Function
 
         ' GET: Product/Details/5
@@ -22,7 +22,7 @@ Namespace Models
             If IsNothing(id) Then
                 Return New HttpStatusCodeResult(HttpStatusCode.BadRequest)
             End If
-            Dim product As product = db.product.Find(id)
+            Dim product As product = productService.GetProductByProductId(id)
             If IsNothing(product) Then
                 Return HttpNotFound()
             End If
